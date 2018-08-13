@@ -1,0 +1,28 @@
+{
+  "name": "nutshell",
+  "version": "1.0.0",
+  "description": "Nutshell proj",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "nutshell"
+  },
+  "keywords": [
+    "nutshell",
+    "project"
+  ],
+  "author": "mateusvanhalem",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "grunt": "^1.0.3",
+    "grunt-browserify": "^5.3.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-eslint": "^21.0.0",
+    "matchdep": "^2.0.0"
+  }
+}
