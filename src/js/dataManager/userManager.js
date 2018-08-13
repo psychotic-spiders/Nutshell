@@ -33,6 +33,7 @@ const userManager = Object.create(null, {
                 }).then(r => r.json)
             }
         },
-
+    }
+})
 
 module.exports = userManager
