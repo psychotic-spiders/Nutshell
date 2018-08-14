@@ -1,66 +1,61 @@
 {
-    "users": [
-        {
-            "firstName": "matt",
-            "lastName": "hall",
-            "userName": "Mateusvanhalen",
-            "email": "Mateusvanhalen@gmail.com",
-            "password": "4567B9"
-        },
-        {
-            "firstName": "mike",
-            "lastName": "parrish",
-            "userName": "thatmikeparrish",
-            "email": "mparrish615@gmail.com",
-            "password": "12E456"
-        },
-        {
-            "firstName": "klaus",
-            "lastName": "hardt",
-            "userName": "Klaus Hardt",
-            "email": "Klaus_Hardt@gmail.com",
-            "password": "78912E"
-        },
-        {
-            "firstName": "dejan",
-            "lastName": "stjepanovic",
-            "userName": "Dejan Stjepanovic",
-            "email": "Dejan_Stjepanovic@gmail.com",
-            "password": "14725B"
-        }
-    ],
-
-    "articles": [
-        {
-            "content": "here is some stuff",
-            "url": "www.google.com",
-            "title": "Stuff Title",
-            "date": "8/13/2018",
-            "userID": 3
-        }
-    ],
-
-    "events": [
-        {
-            "name": "Fun Event!",
-            "date": "8/25/2018",
-            "location": "Nashville, TN",
-            "userID": 3
-        }
-    ],
-    
-    "tasks": [
-        {
-            "name": "Hard Task",
-            "userID": 3
-        }
-    ],
-    
-    "messages": [
-
-    ],
-
-    "friendship": [
-
-    ]
+  "users": [
+    {
+      "firstName": "sd",
+      "lastName": "dasd",
+      "userName": "dasd",
+      "email": "dasd",
+      "password": "dads",
+      "id": 1
+    },
+    {
+      "firstName": "sdflkjsdq",
+      "lastName": "sdflkj",
+      "userName": "asdlfkj",
+      "email": "sdflkj",
+      "password": "sdlfkj",
+      "id": 2
+    },
+    {
+      "firstName": "qwe",
+      "lastName": "qwert",
+      "userName": "twer",
+      "email": "dfsdf",
+      "password": "sdf",
+      "id": 3
+    },
+    {
+      "firstName": "test",
+      "lastName": "test",
+      "userName": "test",
+      "email": "test",
+      "password": "test",
+      "id": 4
+    }
+  ],
+  "articles": [
+    {
+      "content": "here is some stuff",
+      "url": "www.google.com",
+      "title": "Stuff Title",
+      "date": "8/13/2018",
+      "userID": 3
+    }
+  ],
+  "events": [
+    {
+      "name": "Fun Event!",
+      "date": "8/25/2018",
+      "location": "Nashville, TN",
+      "userID": 3
+    }
+  ],
+  "tasks": [
+    {
+      "name": "Hard Task",
+      "userID": 3
+    }
+  ],
+  "messages": [],
+  "friendship": []
 }
