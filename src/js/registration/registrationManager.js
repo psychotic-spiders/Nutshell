@@ -1,13 +1,14 @@
 console.log("registrationManger.js")
 let userManager = require("../dataManager/userManager");
-let $ = require("jquery");
+const $ = require("jquery");
+
 
 document.querySelector("#registrationSubmitButton").addEventListener("click", () => {
 
     userManager.getAllUsers().then(allUsers => {
         let validFormInput = true;
 
-        allUsers.forEach(user => {
+        allUsers.forEach(users => {
             if (users.email === document.querySelector("#email").value) {
                 validFormInput = false;
                 alert("This email already exists. Please try again.")
