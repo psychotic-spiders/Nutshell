@@ -28,3 +28,5 @@ const taskManager = Object.create(null, {
         },
     }
 })
+
+module.exports = taskManager
