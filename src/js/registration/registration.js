@@ -34,7 +34,7 @@ const registration = Object.create(null, {
                         <input required type="text" name="password" class="registrationInput" id="password"> <br>
 
 
-                        <button class="registrationSubmitButton">Submit</button>
+                        <button id="registrationSubmitButton">Submit</button>
                     </div>
                 </div>`
         }
