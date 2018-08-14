@@ -1,18 +1,11 @@
-const userManager = Object.create(null, {
-    //get all users. etc. fetch's       MVH
-    getAllUsers: {
-        value: () => {
-            return fetch("http://localhost:8088/users").then(r => r.json())
-        }
-    },
-
-    getSingleUsers: {
+const taskManager = Object.create(null, {
+    getAllTask: {
         value: () => {
             return fetch("http://localhost:8080/GetSingleUsers").then(r => r.json())
         }
     },
 
-    createUser: {
+    createTask: {
         value: () => {
             return fetch("http://localhost:8088/CreateUsers", {
                 method: "POST"
@@ -20,13 +13,13 @@ const userManager = Object.create(null, {
         }
     },
 
-    deleteUser: {
+    deleteTask: {
         value: (id) => {
             return fetch("http://localhost:8088/entries/${id}", {
                 method: "DELETE"
             }).then(r => r.json)
         },
-        updateUsers: {
+        updateTask: {
             value: () => {
                 return fetch("http://localhost:8088/update", {
                     method: "PUT"
@@ -35,5 +28,3 @@ const userManager = Object.create(null, {
         },
     }
 })
-
-module.exports = userManager
