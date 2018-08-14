@@ -8,7 +8,7 @@ const userManager = Object.create(null, {
 
     getSingleUsers: {
         value: () => {
-            return fetch("http://localhost:8080/GetSingleUsers").then(r => r.json())
+            return fetch(`http://localhost:8080/users${id}`).then(r => r.json())
         }
     },
 
@@ -22,13 +22,13 @@ const userManager = Object.create(null, {
 
     deleteUser: {
         value: (id) => {
-            return fetch("http://localhost:8088/entries/${id}", {
+            return fetch(`http://localhost:8088/entries/${id}`, {
                 method: "DELETE"
             }).then(r => r.json)
         },
         updateUsers: {
             value: () => {
-                return fetch("http://localhost:8088/update", {
+                return fetch(`http://localhost:8088/users${id}`, {
                     method: "PUT"
                 }).then(r => r.json)
             }
