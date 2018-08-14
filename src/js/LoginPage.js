@@ -1,9 +1,9 @@
 const userManager = require("./dataManager/userManager.js");
-const sessionActiveUser = require(".sessionActiveUser.js")
+const sessionActiveUser = require("./dataManager/sessionActiveUser")
 const $ = require("jquery")
 
-function logInPage () {
-document.getElementById("logIn").innerHTML = `
+function logInPage() {
+    document.getElementById("logIn").innerHTML = `
 <h2>Login Page</h2>
 
     <div class = "container">
@@ -23,38 +23,46 @@ document.getElementById("logIn").innerHTML = `
     </div>
 
 `
-//class for specific button/value and put in variable. Then below make that userNameImput
+    //class for specific button/value and put in variable. Then below make that userNameImput
 
-document.getElementById("logInButton").addEventListener("click", logInUser)
+    document.getElementById("logInButton").addEventListener("click", logInUser)
 
 
 
-function logInUser () {
-    userManager.getAllUsers(userName, email).then(user => {
-        console.log(user);
-        //const userName = document.getElementById("usrNameInput").value
-        //const email = document.getElementById("emailInput").value
-        // Setting flag variable to false
-        //let userAuthenticated = false;
-        // Loop over all users to see if input matches an existing user
-        //allUsers.forEach(user => {
+    function logInUser() {
+        const userName = document.getElementById("usrNameInput").value
+        const email = document.getElementById("emailInput").value
+        userManager.getAllUsers(userName, email).then(user => {
+            console.log(user);
+            if (user.length === 0) {
+                alert("please try again!")
+            }
+            else {
+                $("#logIn").hide();
+                //$("#mainPage").show();
+                sessionActiveUser.saveActiveUser(user)
+                console.log(user)
+            }
+            // Setting flag variable to false
+            //let userAuthenticated = false;
+            // Loop over all users to see if input matches an existing user
+            //allUsers.forEach(user => {
             //if (user.userName === userName && user.email === email) {
 
 
 
-                // Matching user so set flag variable to true
-               // userAuthenticated = true;
-                //$("#logIn").hide();
-               //$("#mainPage").show();
-               //how to find the page tied to specific user?
-                //dashboard()
-                //session.saveActiveUser(users);
-           // }
+            // Matching user so set flag variable to true
+            // userAuthenticated = true;
+
+            //how to find the page tied to specific user?
+            //dashboard()
+            //session.saveActiveUser(users);
+            // }
 
 
 
-})
-}
+        })
+    }
 
 }
 module.exports = logInPage

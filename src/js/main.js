@@ -2,7 +2,7 @@ console.log("MEOW")
 const $ = require("jquery")
 const logInPage = require("./LoginPage.js")
 
-const sessionActiveUser = require("./dataManager/sessionActiveUser.js")
+//const sessionActiveUser = require("./dataManager/sessionActiveUser.js")
 const articleManager = require("./dataManager/articlesManager.js")
 
 
