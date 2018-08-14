@@ -1,5 +1,4 @@
-console.log("registration.js")
-
+// Mike - Registration
 
 const registration = Object.create(null, {
     /* clearForm: {
@@ -25,7 +24,7 @@ const registration = Object.create(null, {
                         <input required type="text" name="Last Name" class="registrationInput" id="lastName"> <br>
 
                         <label for="userName">Username: </label>
-                        <input required type="text" name="username" class="registrationInput" id="username"> <br>
+                        <input required type="text" name="userName" class="registrationInput" id="userName"> <br>
 
                         <label for="email">Email: </label>
                         <input required type="text" name="email" class="registrationInput" id="email"> <br>

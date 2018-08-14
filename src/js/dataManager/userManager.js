@@ -12,15 +12,20 @@ const userManager = Object.create(null, {
         }
     },
 
-    createUser: {
-        value: () => {
-            return fetch("http://localhost:8088/CreateUsers", {
-                method: "POST"
+    createUsers: {
+        value: (newUser) => {
+            return fetch("http://localhost:8088/users", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newUser)
             }).then(r => r.json)
         }
     },
 
-    deleteUser: {
+    deleteUsers: {
         value: (id) => {
             return fetch("http://localhost:8088/entries/${id}", {
                 method: "DELETE"
