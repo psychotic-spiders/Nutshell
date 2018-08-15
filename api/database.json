@@ -31,6 +31,22 @@
       "email": "test",
       "password": "test",
       "id": 4
+    },
+    {
+      "firstName": "kjhlkjn",
+      "lastName": "jnbjnb",
+      "userName": "mn,bm,nb",
+      "email": "mmnbmnb",
+      "password": "bmbmnb",
+      "id": 5
+    },
+    {
+      "firstName": "ye[",
+      "lastName": "yep",
+      "userName": "yep",
+      "email": "yrp",
+      "password": "yarp",
+      "id": 6
     }
   ],
   "articles": [

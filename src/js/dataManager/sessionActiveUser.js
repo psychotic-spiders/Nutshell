@@ -13,10 +13,11 @@ const sessionActiveUser = Object.create(null, {
     saveActiveUser: {
         value: (users) => {
              //note the need below to JSON.stringify the item we get from session storage.
+             console.log(users[0])
             sessionStorage.setItem("ActiveUser", JSON.stringify({
-                    "id": users.id,
-                    "username": users.userName,
-                    "email": users.email
+                    "id": users[0].id,
+                    "username": users[0].userName,
+                    "email": users[0].email
                 }))
         }
     },
