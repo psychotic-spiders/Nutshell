@@ -9,8 +9,8 @@ const activateForm = require("./registration/registrationManager");
 const articleManager = require("./dataManager/articlesManager");
 
 // Registration - Mike
-document.querySelector("#registrationForm").innerHTML = registration.renderForm();
-activateForm()
+//document.querySelector("#registrationForm").innerHTML = registration.renderForm();
+//activateForm()
 
 
 
