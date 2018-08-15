@@ -2,6 +2,7 @@
 
 let userManager = require("../dataManager/userManager");
 let session = require("../dataManager/sessionActiveUser");
+const logInPage =require("../LoginPage");
 const $ = require("jquery");
 
 
@@ -35,6 +36,8 @@ const activateForm = function () {
                 // });
             }
         })
+        //$("#container").empty()
+        //logInPage()
 
         /* userManager.createUser(newUser).then(() => {
             registration.clearForm()

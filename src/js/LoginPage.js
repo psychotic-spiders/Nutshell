@@ -1,9 +1,12 @@
 const userManager = require("./dataManager/userManager.js");
 const sessionActiveUser = require("./dataManager/sessionActiveUser")
+const registration = require("./registration/registration.js")
+const activateForm = require("./registration/registrationManager")
 const $ = require("jquery")
 
+//below is the DOM representation with filler for register
 function logInPage() {
-    document.getElementById("logIn").innerHTML = `
+    document.getElementById("container").innerHTML = `
 <h2>Login Page</h2>
 
     <div class = "container">
@@ -18,22 +21,21 @@ function logInPage() {
     <label> <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
     <br>
-    <input type="button" onclick="location.href='http://www.cnn.com';" value="Register" />
+    <button id="registerButton" type="button">Register</ value="Register">
 
     </div>
 
 `
-    //class for specific button/value and put in variable. Then below make that userNameImput
 
     document.getElementById("logInButton").addEventListener("click", logInUser)
-
+    document.getElementById("registerButton").addEventListener("click", regUser)
 
 
     function logInUser() {
         const userName = document.getElementById("usrNameInput").value
         const email = document.getElementById("emailInput").value
-        userManager.getAllUsers(userName, email).then(user => {
-            console.log(user);
+        userManager.getSingleUsers(userName, email).then(user => {
+            //console.log(user);
             if (user.length === 0) {
                 alert("please try again!")
             }
@@ -62,6 +64,13 @@ function logInPage() {
 
 
         })
+    }
+
+    function regUser() {
+        $("#container").empty()
+        document.querySelector("#container").innerHTML = registration.renderForm();
+activateForm()
+
     }
 
 }

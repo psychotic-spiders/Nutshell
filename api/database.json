@@ -33,12 +33,20 @@
       "id": 4
     },
     {
-      "firstName": "Mike",
-      "lastName": "Parrish",
-      "userName": "thatmikeparrish",
-      "email": "mparrish615@gmail.com",
-      "password": "1234",
+      "firstName": "kjhlkjn",
+      "lastName": "jnbjnb",
+      "userName": "mn,bm,nb",
+      "email": "mmnbmnb",
+      "password": "bmbmnb",
       "id": 5
+    },
+    {
+      "firstName": "ye[",
+      "lastName": "yep",
+      "userName": "yep",
+      "email": "yrp",
+      "password": "yarp",
+      "id": 6
     }
   ],
   "articles": [
