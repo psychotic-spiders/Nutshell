@@ -17,29 +17,29 @@ const registration = Object.create(null, {
                     </div>
                     <div class="registrationInputDOM">
 
-                        <label for="firstName">First Name: </label>
-                        <input required type="text" name="First Name" class="registrationInput" id="firstName"> <br>
-
-                        <label for="lastName">Last Name: </label>
-                        <input required type="text" name="Last Name" class="registrationInput" id="lastName"> <br>
-
-                        <label for="userName">Username: </label>
-                        <input required type="text" name="userName" class="registrationInput" id="userName"> <br>
-
-                        <label for="email">Email: </label>
-                        <input required type="text" name="email" class="registrationInput" id="email"> <br>
-
-                        <label for="password">Password: </label>
-                        <input required type="text" name="password" class="registrationInput" id="password"> <br>
-
-
+                        <input required type="text" name="First Name" class="registrationInput" id="firstName" placeholder="First Name"> <br>
+                    
+                        <input required type="text" name="Last Name" class="registrationInput" id="lastName" placeholder="Last Name"> <br>
+                    
+                        <input required type="text" name="userName" class="registrationInput" id="userName" placeholder="Username"> <br>
+                    
+                        <input required type="text" name="email" class="registrationInput" id="email" placeholder="Email"> <br>
+                    
+                        <input required type="text" name="password" class="registrationInput" id="password" placeholder="Password"> <br>
+                    
                         <button id="registrationSubmitButton">Submit</button>
                     </div>
-                </div>`
+                </div>
+            `
         }
     }
 })
 
-
+// Labels for renderForm
+/*  <label for= "firstName" > First Name: </label>
+    <label for="lastName">Last Name: </label>
+    <label for="userName">Username: </label>
+    <label for="email">Email: </label>
+    <label for="password">Password: </label> */
 
 module.exports = registration

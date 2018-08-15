@@ -31,6 +31,14 @@
       "email": "test",
       "password": "test",
       "id": 4
+    },
+    {
+      "firstName": "Mike",
+      "lastName": "Parrish",
+      "userName": "thatmikeparrish",
+      "email": "mparrish615@gmail.com",
+      "password": "1234",
+      "id": 5
     }
   ],
   "articles": [
@@ -42,14 +50,7 @@
       "userID": 3
     }
   ],
-  "events": [
-    {
-      "name": "Fun Event!",
-      "date": "8/25/2018",
-      "location": "Nashville, TN",
-      "userID": 3
-    }
-  ],
+  "events": [],
   "tasks": [
     {
       "name": "Hard Task",
