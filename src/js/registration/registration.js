@@ -12,26 +12,17 @@ const registration = Object.create(null, {
         value: () => {
             return `
                 <div class="wrapperRegistrationInputDOM">
-                    <div id="logIn">
-                        <h2>PLACE HOLDER FOR LOGO</h2>
-                    </div>
                     <form class="registrationInputDOM">
 
-                        <label for="firstName">First Name: </label>
-                        <input required type="text" name="firstName" class="registrationInput" id="firstName" value="First Name"> <br>
+                        <input required type="text" name="firstName" class="registrationInput" id="firstName" placeholder="First Name"> <br>
 
-                        <label for="lastName">Last Name: </label>
-                        <input required type="text" name="lastName" class="registrationInput" id="lastName" value="Last Name"> <br>
+                        <input required type="text" name="lastName" class="registrationInput" id="lastName" placeholder="Last Name"> <br>
 
-                        <label for="userName">Username: </label>
-                        <input required type="text" name="userName" class="registrationInput" id="userName" value="Username"> <br>
+                        <input required type="text" name="userName" class="registrationInput" id="userName" placeholder="Username"> <br>
 
-                        <label for="email">Email: </label>
-                        <input required type="text" name="email" class="registrationInput" id="email" value="Email"> <br>
+                        <input required type="text" name="email" class="registrationInput" id="email" placeholder="Email"> <br>
 
-                        <label for="password">Password: </label>
-                        <input required type="text" name="password" class="registrationInput" id="password" value="Password"> <br>
-
+                        <input required type="text" name="password" class="registrationInput" id="password" placeholder="Password"> <br>
 
                         <button id="registrationSubmitButton">Submit</button>
                     </form>
