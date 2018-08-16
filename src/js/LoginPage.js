@@ -2,9 +2,10 @@ const userManager = require("./dataManager/userManager.js");
 const sessionActiveUser = require("./dataManager/sessionActiveUser")
 const registration = require("./registration/registration.js")
 const activateForm = require("./registration/registrationManager")
+const loadScreen = require("./LoadUserScreen")
 const $ = require("jquery")
 
-//below is the DOM representation with filler for register
+//below is the DOM representation for the page:
 function logInPage() {
     document.getElementById("container").innerHTML = `
 <h2>Login Page</h2>
@@ -26,11 +27,11 @@ function logInPage() {
     </div>
 
 `
-
+//added event listeners:
     document.getElementById("logInButton").addEventListener("click", logInUser)
     document.getElementById("registerButton").addEventListener("click", regUser)
 
-
+//below is specific for loginbutton action:
     function logInUser() {
         const userName = document.getElementById("usrNameInput").value
         const email = document.getElementById("emailInput").value
@@ -40,38 +41,23 @@ function logInPage() {
                 alert("please try again!")
             }
             else {
-                $("#logIn").hide();
-                //$("#mainPage").show();
                 sessionActiveUser.saveActiveUser(user)
-                console.log(user)
+                $("#container").empty();
+                loadScreen();
+                //console.log(user)
             }
-            // Setting flag variable to false
-            //let userAuthenticated = false;
-            // Loop over all users to see if input matches an existing user
-            //allUsers.forEach(user => {
-            //if (user.userName === userName && user.email === email) {
-
-
-
-            // Matching user so set flag variable to true
-            // userAuthenticated = true;
-
-            //how to find the page tied to specific user?
-            //dashboard()
-            //session.saveActiveUser(users);
-            // }
-
 
 
         })
     }
-
+//below if user clicks register
     function regUser() {
         $("#container").empty()
         document.querySelector("#container").innerHTML = registration.renderForm();
-activateForm()
+        activateForm()
 
     }
+
 
 }
 module.exports = logInPage
