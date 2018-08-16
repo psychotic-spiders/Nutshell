@@ -14,9 +14,9 @@ const inputMessageDOM = Object.create(null, {
                 return `
                 <div class = "wrapperInputDOM">
                 <div class = "inputDOM">
-                <label for="entryContent">Content:</label>
-                <textarea class= "entryContent" id="entryContent" rows="12"></textarea>
-            <button class="saveEntryButton">Save </button>
+                <label for="entryormContent"></label>
+                <textarea class= "entryForContent" id="entryContent" rows="12"></textarea>
+            <button class="saveEntryButton">Post</button>
             </div>
             </div>`
             }
