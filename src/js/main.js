@@ -1,6 +1,8 @@
 console.log("MEOW")
 const $ = require("jquery")
 const logInPage = require("./LoginPage.js")
+const loadScreen = require("./LoadUserScreen")
+//const taskManager = require("./dataManager/tasksManager")
 
 //const sessionActiveUser = require("./dataManager/sessionActiveUser.js")
 
@@ -21,7 +23,7 @@ const inputArticles = require("./articles/inputArticles");
 const messageEntriesDOM = require("./messages/messageEntriesDOM");
 const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM");
 
-
+//wtf is this?
 function articleList() {
     articleManager.getArticles()
     .then(r => {
