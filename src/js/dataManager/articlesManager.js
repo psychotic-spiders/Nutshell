@@ -12,14 +12,19 @@ const articleManager = Object.create(null, {
                 method: "DELETE"
             }).then(r => r.json)
         },
+    },
+    saveArticleEntry: {
+        value: (newEntry) => {
+            return fetch("http://localhost:8088/articles", {
+                method: "POST",
+                headers: {
 
-        postArticles: {
-            value: () => {
-                return fetch("http://localhost:8088/articles", {
-                    method: "POST"
-                }).then(r => r.json)
-            }
-        },
-    }})
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newEntry)
+            }).then(r => r.json)
+        }
+    },
+})
 
 module.exports = articleManager
