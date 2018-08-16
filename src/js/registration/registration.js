@@ -15,26 +15,26 @@ const registration = Object.create(null, {
                     <div id="logIn">
                         <h2>PLACE HOLDER FOR LOGO</h2>
                     </div>
-                    <div class="registrationInputDOM">
+                    <form class="registrationInputDOM">
 
                         <label for="firstName">First Name: </label>
-                        <input required type="text" name="First Name" class="registrationInput" id="firstName"> <br>
+                        <input required type="text" name="firstName" class="registrationInput" id="firstName" value="First Name"> <br>
 
                         <label for="lastName">Last Name: </label>
-                        <input required type="text" name="Last Name" class="registrationInput" id="lastName"> <br>
+                        <input required type="text" name="lastName" class="registrationInput" id="lastName" value="Last Name"> <br>
 
                         <label for="userName">Username: </label>
-                        <input required type="text" name="userName" class="registrationInput" id="userName"> <br>
+                        <input required type="text" name="userName" class="registrationInput" id="userName" value="Username"> <br>
 
                         <label for="email">Email: </label>
-                        <input required type="text" name="email" class="registrationInput" id="email"> <br>
+                        <input required type="text" name="email" class="registrationInput" id="email" value="Email"> <br>
 
                         <label for="password">Password: </label>
-                        <input required type="text" name="password" class="registrationInput" id="password"> <br>
+                        <input required type="text" name="password" class="registrationInput" id="password" value="Password"> <br>
 
 
                         <button id="registrationSubmitButton">Submit</button>
-                    </div>
+                    </form>
                 </div>`
         }
     }

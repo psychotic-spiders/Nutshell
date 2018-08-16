@@ -31,6 +31,30 @@
       "email": "test",
       "password": "test",
       "id": 4
+    },
+    {
+      "firstName": "test1",
+      "lastName": "test1",
+      "userName": "test1",
+      "email": "test1",
+      "password": "test1",
+      "id": 5
+    },
+    {
+      "firstName": "mike",
+      "lastName": "mike",
+      "userName": "test",
+      "email": "test86",
+      "password": "wer",
+      "id": 6
+    },
+    {
+      "firstName": "test234",
+      "lastName": "23423",
+      "userName": "457457",
+      "email": "789789",
+      "password": "0-=0-",
+      "id": 7
     }
   ],
   "articles": [
