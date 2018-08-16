@@ -67,11 +67,40 @@
   ],
   "articles": [
     {
-      "content": "here is some stuff",
-      "url": "www.google.com",
-      "title": "Stuff Title",
-      "date": "8/13/2018",
-      "userID": 3
+      "content": "asdfas",
+      "userID": 4,
+      "userName": "test",
+      "URL": "dd",
+      "date": 1534444123647,
+      "Synopsis": "ddd",
+      "id": 1
+    },
+    {
+      "content": "asdfas",
+      "userID": 4,
+      "userName": "test",
+      "URL": "dd",
+      "date": 1534444124482,
+      "Synopsis": "ddd",
+      "id": 2
+    },
+    {
+      "content": "asdfas",
+      "userID": 4,
+      "userName": "test",
+      "URL": "dd",
+      "date": 1534444125083,
+      "Synopsis": "ddd",
+      "id": 3
+    },
+    {
+      "content": "asdfas",
+      "userID": 4,
+      "userName": "test",
+      "URL": "dd",
+      "date": 1534444138856,
+      "Synopsis": "ddd",
+      "id": 4
     }
   ],
   "events": [
@@ -192,6 +221,20 @@
       "userName": "bloop",
       "date": 1534365497212,
       "id": 15
+    },
+    {
+      "content": "qwerqeqr",
+      "userID": 4,
+      "userName": "test",
+      "date": 1534438528832,
+      "id": 16
+    },
+    {
+      "content": " jadoop",
+      "userID": 4,
+      "userName": "test",
+      "date": 1534438549462,
+      "id": 17
     }
   ],
   "friendship": []
