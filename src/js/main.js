@@ -16,13 +16,10 @@ const addArtcilesDom = require("./articles/addArticlesDom");
 // Messages - Dejan
 const inputMessageDOM = require("./messages/inputMessagesDOM");
 const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");
-<<<<<<< HEAD
 const saveArticleToDatabase = require("./articles/addArticlesDom")
 const inputArticles = require("./articles/inputArticles");
-=======
 const messageEntriesDOM = require("./messages/messageEntriesDOM");
 const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM");
->>>>>>> master
 
 
 function articleList() {

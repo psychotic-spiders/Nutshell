@@ -14,8 +14,8 @@ const userObject = session.getActiveUser()
 // send data to session storage by category Matt
     const newArticle = {
         content: document.querySelector("#titleClass").value,
-        userID: userObject.id,
-        userName: userObject.username,
+        // userID: userObject.id,
+        // userName: userObject.username,
         URL: document.querySelector("#URLClass").value,
         date: Date.now(),
         Synopsis: document.querySelector("#symClass").value,

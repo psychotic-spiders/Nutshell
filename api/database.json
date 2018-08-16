@@ -67,40 +67,18 @@
   ],
   "articles": [
     {
-      "content": "asdfas",
-      "userID": 4,
-      "userName": "test",
-      "URL": "dd",
-      "date": 1534444123647,
-      "Synopsis": "ddd",
+      "content": "q",
+      "URL": "q",
+      "date": 1534445818788,
+      "Synopsis": "q",
       "id": 1
     },
     {
-      "content": "asdfas",
-      "userID": 4,
-      "userName": "test",
-      "URL": "dd",
-      "date": 1534444124482,
-      "Synopsis": "ddd",
+      "content": "q",
+      "URL": "q",
+      "date": 1534445821234,
+      "Synopsis": "q",
       "id": 2
-    },
-    {
-      "content": "asdfas",
-      "userID": 4,
-      "userName": "test",
-      "URL": "dd",
-      "date": 1534444125083,
-      "Synopsis": "ddd",
-      "id": 3
-    },
-    {
-      "content": "asdfas",
-      "userID": 4,
-      "userName": "test",
-      "URL": "dd",
-      "date": 1534444138856,
-      "Synopsis": "ddd",
-      "id": 4
     }
   ],
   "events": [
