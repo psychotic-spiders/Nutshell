@@ -5,12 +5,20 @@ const logInPage = require("./LoginPage.js")
 //const sessionActiveUser = require("./dataManager/sessionActiveUser.js")
 
 const registration = require("./registration/registration");
+const eventsForm = require("./events/eventsForm");
+const saveEvents = require("./events/saveEvents");
+const events = require("./events/events")
 const activateForm = require("./registration/registrationManager");
 const articleManager = require("./dataManager/articlesManager");
 
 // Registration - Mike
 document.querySelector("#registrationForm").innerHTML = registration.renderForm();
-//activateForm()
+activateForm()
+
+// Events - Mike
+document.querySelector("#events").innerHTML = eventsForm.renderEventsForm();
+saveEvents()
+
 // Messages - Dejan
 const inputMessageDOM = require("./messages/inputMessagesDOM");
 const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");

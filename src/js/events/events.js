@@ -1,44 +1,12 @@
-// Mike - Events
-let db = require("../dataManager/eventsManager");
+let eventManager = require("../dataManager/eventsManager")
+let eventList = require("./eventsList")
 
-const events = Object.create(null, {
-    renderEvents: {
-        value: () => {
-            return `
-                <div id="wrapperEventsDOM">
-                    <div class="titleBlock">
-                        <h2>EVENTS</h2>
-                    </div>
-                    <div class="eventsDOM">
-                        <card>
-                        </card>
-                    </div>
-                </div>
-            `
-        }
-    },
+let events = {};
 
-    eventsForm: {
-        value: () => {
-            return `
-                <div id="wrapperEventsFormDOM">
-                    <div class="titleBlock">
-                        <h2>New Event</h2>
-                    </div>
-                    <div class="eventsForm">
-                        <input required type="text" class="eventsInput" id="eventsTitle" placeholder="Title"> <br>
-                        <textarea required id="eventsContent" placeholder="Describe your event..." rows="10">
-                    </div>
-                </div>
-            `
-        }
-    },
+eventManager.getEvent()
+.then((result) => {
+    events = result;
+    eventList(events);
+});
 
-    saveEvent: {
-        value: () => {
-
-        }
-    }
-})
-
-module.exports = events
+module.exports = events;

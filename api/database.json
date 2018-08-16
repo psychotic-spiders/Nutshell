@@ -74,7 +74,52 @@
       "userID": 3
     }
   ],
-  "events": [],
+  "events": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "title": "test",
+      "location": "set",
+      "date": 1534433517252,
+      "userID": 4,
+      "userName": "test",
+      "id": 4
+    },
+    {
+      "title": "Mike's Birthday",
+      "location": "Nashville",
+      "date": 1534433556122,
+      "userID": 4,
+      "userName": "test",
+      "id": 5
+    },
+    {
+      "title": "test",
+      "location": "nash",
+      "date": 1534444150040,
+      "content": "here is a event in nashville",
+      "userID": 4,
+      "userName": "test",
+      "id": 6
+    },
+    {
+      "title": "Mike's Birthday",
+      "location": "Nashville",
+      "eventDate": "11/18/1988",
+      "content": "Making sure the dates aren't f'ed up.",
+      "userID": 4,
+      "userName": "test",
+      "date": 1534444529420,
+      "id": 7
+    }
+  ],
   "tasks": [
     {
       "name": "Hard Task",

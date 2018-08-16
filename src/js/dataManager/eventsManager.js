@@ -1,5 +1,4 @@
 // Matt Promises
-
 const eventManager = Object.create(null, {
     getEvent: {
         value: () => {
@@ -16,9 +15,14 @@ const eventManager = Object.create(null, {
     },
 
     postEvents: {
-        value: () => {
+        value: (newEvent) => {
             return fetch("http://localhost:8088/events", {
-                method: "POST"
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newEvent)
             }).then(r => r.json)
         }
     }
