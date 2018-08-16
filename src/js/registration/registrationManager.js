@@ -2,7 +2,7 @@
 
 let userManager = require("../dataManager/userManager");
 let session = require("../dataManager/sessionActiveUser");
-const logInPage =require("../LoginPage");
+const logInPage =require("../LoginPage.js");
 const $ = require("jquery");
 
 
@@ -28,12 +28,15 @@ const activateForm = function () {
                     // date: Date.now()
                 });
 
-                // newUser.done(function (msg) {
-                    // alert("You have successfully registered. Please log in");
+                //newUser.done(function () {
+                    alert("You have successfully registered. Please log in")
+                    $("#container").empty();
+                    //$("#container").html(logInPage());
                     // $("#registrationPage").hide();
-                    // $("#loginPage").show();
+                    document.querySelector("#container").innerHTML = logInPage();
+                    //$("#loginPage").show();
                     // session.saveActiveUser();
-                // });
+                //});
             }
         })
         //$("#container").empty()
