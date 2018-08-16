@@ -11,7 +11,9 @@ const articleManager = require("./dataManager/articlesManager");
 // Registration - Mike
 //document.querySelector("#registrationForm").innerHTML = registration.renderForm();
 //activateForm()
-
+// Messages - Dejan
+const inputMessageDOM = require("./messages/inputMessagesDOM");
+const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");
 
 
 function articleList() {
@@ -33,4 +35,7 @@ logInPage()
 
 
 
+// Dejan
+document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
+saveMessageEntryToDatabase()
 
