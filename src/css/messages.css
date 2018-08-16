@@ -1,0 +1,67 @@
+
+/* MESSAGE CARD */
+.wrapper {
+    justify-content: center;
+    display:flex;
+}
+.entryForContent{
+    color: lightblue;
+}
+.entriesDOM {
+
+    border: solid;
+    border-color: goldenrod;
+    width: 40em;
+    margin: 1em;
+    padding: 1em;
+    flex-wrap: wrap;
+    background-color: lightblue;
+    border-radius: 20px;
+}
+
+/*  INPUT FIELDS AND SAVE BUTTON */
+.wrapperInputDOM {
+    justify-content: center;
+    display:flex;
+
+}
+.inputDOM {
+    border: solid;
+    width: 40em;
+    margin: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    border-radius: 20px;
+    border-color: goldenrod;
+
+}
+
+.entryUserName{
+    margin: 1em;
+    padding: 1em;
+    color: #FFFDE8;
+
+}
+.entryContent{
+    margin: 1em;
+    padding: 1em;
+    color: #FFFDE8;
+
+}
+.entry__timestamp{
+    margin: 1em;
+    padding: 1em;
+    color: #FFFDE8;
+}
+.saveEntryButton {
+    width: 10em;
+    border:solid;
+    border-color: blue;
+    background-color: lightblue;
+    color:blue;
+    margin:1em;
+    border-radius: 5px;
+
+}
