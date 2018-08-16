@@ -3,32 +3,27 @@ const taskManager = require("./dataManager/tasksManager")
 const sessionUser = require("./dataManager/sessionActiveUser")
 //getActiveUser.ID
 
-//loop through-
+
 function loadScreen() {
-    console.log("Hi")
-    console.log(sessionUser.getActiveUser().id)
-  if (sessionUser.getActiveUser().id === taskManager.getAllTasks().id) {
-    getAllTasks.tasks.forEach(element => {
-      document.getElementById("container").innerHTML= `
-      <h3>${element}</h3>
-      `
-    });
+    //console.log("Hi")
+    //console.log(sessionUser.getActiveUser().id)
+    let findUser = sessionUser.getActiveUser().id
+    let findTasks = taskManager.getAllTasks(findUser)
+    console.log(findUser)
+    console.log(findTasks)
+
+
+
+    findTasks.then(result => {
+      console.log(result)
+      result.forEach(element => {
+        document.getElementById("container").innerHTML += `
+        <h3>${element.name}</h3>
+        `
+      })
+
+    })
   }
-    //if (getAllTask${id} === getActiveUser.id) {
-        //console.log(userID)
-//document.getElementById("container").innerHTML =`
-//<h2>Something</h2>`//loop over for DOM write tasks
-
-  //  }
-
-
-
-
-
-
-
-
-}
 
 
 

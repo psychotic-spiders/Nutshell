@@ -5,7 +5,7 @@ const activateForm = require("./registration/registrationManager")
 const loadScreen = require("./LoadUserScreen")
 const $ = require("jquery")
 
-//below is the DOM representation with filler for register
+//below is the DOM representation for the page:
 function logInPage() {
     document.getElementById("container").innerHTML = `
 <h2>Login Page</h2>
@@ -27,11 +27,11 @@ function logInPage() {
     </div>
 
 `
-
+//added event listeners:
     document.getElementById("logInButton").addEventListener("click", logInUser)
     document.getElementById("registerButton").addEventListener("click", regUser)
 
-
+//below is specific for loginbutton action:
     function logInUser() {
         const userName = document.getElementById("usrNameInput").value
         const email = document.getElementById("emailInput").value
@@ -41,32 +41,23 @@ function logInPage() {
                 alert("please try again!")
             }
             else {
-                //$("#mainPage").show();
                 sessionActiveUser.saveActiveUser(user)
                 $("#container").empty();
                 loadScreen();
                 //console.log(user)
             }
-            // Setting flag variable to false
-            //let userAuthenticated = false;
-            // Loop over all users to see if input matches an existing user
-            //allUsers.forEach(user => {
-            //if (user.userName === userName && user.email === email) {
 
 
         })
     }
-
+//below if user clicks register
     function regUser() {
         $("#container").empty()
         document.querySelector("#container").innerHTML = registration.renderForm();
         activateForm()
 
     }
-//loadScreen()
-//once log in is pressed need to add "main page"?
 
-//whatever userID is loaded will match up with the different tables. So if task.userID = userID then load
 
 }
 module.exports = logInPage

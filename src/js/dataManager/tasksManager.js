@@ -6,8 +6,8 @@ const taskManager = Object.create(null, {
     },
 
     createTask: {
-        value: () => {
-            return fetch("http://localhost:8088/CreateUsers", {
+        value: (name) => {
+            return fetch(`http://localhost:8088/tasks?name=${name}`, {
                 method: "POST"
             }).then(r => r.json)
         }
