@@ -3,7 +3,10 @@
 const inputArticles= Object.create(null, {
     clearArticleForm: {
         value: () => {
-            document.querySelectorAll("#URLClass, symClass, titleClass").value = " "
+            document.querySelector("#URLClass").value = " ",
+            document.querySelector("#symClass").value = " ",
+            document.querySelector("#titleClass").value = " ",
+            alert("article submitted!");
         }
     },
 
@@ -19,7 +22,7 @@ const inputArticles= Object.create(null, {
                 <br>
                 <br>
                 <input id="deleteField" type="text" placeholder="Delete this artcile" required>
-                <button id="delete" type="delete">Delete Article by Title</button>
+                <button id="delete" class="deleteButton" type="delete">Delete Article by Title</button>
                 <br>
             </div>`
             }

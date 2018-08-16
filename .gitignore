@@ -2,13 +2,5 @@
 node_modules
 package-lock.json
 dist/
-<<<<<<< HEAD
 api/database.json
-=======
-database.json
-<<<<<<< HEAD
->>>>>>> master
 
-=======
-  
->>>>>>> master
