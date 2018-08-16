@@ -2,7 +2,7 @@
 
 let userManager = require("../dataManager/userManager");
 let session = require("../dataManager/sessionActiveUser");
-const logInPage =require("../LoginPage");
+const logInPage = require("../LoginPage");
 const $ = require("jquery");
 
 
@@ -25,24 +25,9 @@ const activateForm = function () {
                     userName: document.querySelector("#userName").value,
                     email: document.querySelector("#email").value,
                     password: document.querySelector("#password").value,
-                    // date: Date.now()
                 });
-
-                // newUser.done(function (msg) {
-                    // alert("You have successfully registered. Please log in");
-                    // $("#registrationPage").hide();
-                    // $("#loginPage").show();
-                    // session.saveActiveUser();
-                // });
             }
         })
-        //$("#container").empty()
-        //logInPage()
-
-        /* userManager.createUser(newUser).then(() => {
-            registration.clearForm()
-        }) */
-
     })
 }
 

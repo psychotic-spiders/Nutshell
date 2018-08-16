@@ -2,7 +2,7 @@
 const eventsForm = Object.create(null, {
     clearForm: {
         value: () => {
-            document.querySelector("#events").value = ""
+            document.querySelector("#eventsForm").value = ""
         }
     },
 

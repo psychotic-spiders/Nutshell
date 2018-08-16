@@ -1,12 +1,14 @@
 let eventManager = require("../dataManager/eventsManager")
 let eventList = require("./eventsList")
 
-let events = {};
+// let events = {};
 
-eventManager.getEvent()
-.then((result) => {
-    events = result;
-    eventList(events);
-});
-
-module.exports = events;
+function getEvents (){
+    eventManager.getEvent()
+    .then((result) => {
+        // events = result;
+        eventList(result);
+    });
+} 
+    
+module.exports = getEvents;

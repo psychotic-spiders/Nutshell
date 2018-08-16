@@ -16,7 +16,7 @@ document.querySelector("#registrationForm").innerHTML = registration.renderForm(
 activateForm()
 
 // Events - Mike
-document.querySelector("#events").innerHTML = eventsForm.renderEventsForm();
+document.querySelector("#eventsForm").innerHTML = eventsForm.renderEventsForm();
 saveEvents()
 
 // Messages - Dejan
@@ -33,7 +33,7 @@ function articleList() {
             console.log(entry)})
     })
 }
-
+events()
 articleList()
 logInPage()
 
