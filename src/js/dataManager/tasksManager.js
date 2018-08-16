@@ -1,7 +1,7 @@
 const taskManager = Object.create(null, {
-    getAllTask: {
-        value: () => {
-            return fetch("http://localhost:8080/GetSingleUsers").then(r => r.json())
+    getAllTasks: {
+        value: (id) => {
+            return fetch(`http://localhost:8088/tasks?userID=${id}`).then(r => r.json())
         }
     },
 
@@ -15,7 +15,7 @@ const taskManager = Object.create(null, {
 
     deleteTask: {
         value: (id) => {
-            return fetch("http://localhost:8088/entries/${id}", {
+            return fetch(`http://localhost:8088/entries/${id}`, {
                 method: "DELETE"
             }).then(r => r.json)
         },
@@ -28,3 +28,5 @@ const taskManager = Object.create(null, {
         },
     }
 })
+
+module.exports = taskManager

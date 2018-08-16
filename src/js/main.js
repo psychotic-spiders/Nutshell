@@ -1,6 +1,8 @@
 console.log("MEOW")
 const $ = require("jquery")
 const logInPage = require("./LoginPage.js")
+const loadScreen = require("./LoadUserScreen")
+//const taskManager = require("./dataManager/tasksManager")
 
 //const sessionActiveUser = require("./dataManager/sessionActiveUser.js")
 
@@ -13,7 +15,7 @@ const articleManager = require("./dataManager/articlesManager");
 //activateForm()
 
 
-
+//wtf is this?
 function articleList() {
     articleManager.getArticles()
     .then(r => {

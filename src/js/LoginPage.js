@@ -2,6 +2,7 @@ const userManager = require("./dataManager/userManager.js");
 const sessionActiveUser = require("./dataManager/sessionActiveUser")
 const registration = require("./registration/registration.js")
 const activateForm = require("./registration/registrationManager")
+const loadScreen = require("./LoadUserScreen")
 const $ = require("jquery")
 
 //below is the DOM representation with filler for register
@@ -40,10 +41,11 @@ function logInPage() {
                 alert("please try again!")
             }
             else {
-                $("#logIn").hide();
                 //$("#mainPage").show();
                 sessionActiveUser.saveActiveUser(user)
-                console.log(user)
+                $("#container").empty();
+                loadScreen();
+                //console.log(user)
             }
             // Setting flag variable to false
             //let userAuthenticated = false;
@@ -52,26 +54,19 @@ function logInPage() {
             //if (user.userName === userName && user.email === email) {
 
 
-
-            // Matching user so set flag variable to true
-            // userAuthenticated = true;
-
-            //how to find the page tied to specific user?
-            //dashboard()
-            //session.saveActiveUser(users);
-            // }
-
-
-
         })
     }
 
     function regUser() {
         $("#container").empty()
         document.querySelector("#container").innerHTML = registration.renderForm();
-activateForm()
+        activateForm()
 
     }
+//loadScreen()
+//once log in is pressed need to add "main page"?
+
+//whatever userID is loaded will match up with the different tables. So if task.userID = userID then load
 
 }
 module.exports = logInPage
