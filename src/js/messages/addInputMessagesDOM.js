@@ -3,7 +3,7 @@ const inputMessageDOM = require("./inputMessagesDOM");
 const session = require("../dataManager/sessionActiveUser");
 
 
-const saveMessageEntryToDatabase = function(){
+const populateMessageEntriesDOM = function(){
 
 document.querySelector(".saveEntryButton").addEventListener("click", () => {
 
@@ -29,4 +29,4 @@ const userObject = session.getActiveUser()
 })
 }
 
-module.exports = saveMessageEntryToDatabase
+module.exports = populateMessageEntriesDOM

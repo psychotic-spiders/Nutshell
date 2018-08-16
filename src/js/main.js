@@ -14,6 +14,8 @@ const articleManager = require("./dataManager/articlesManager");
 // Messages - Dejan
 const inputMessageDOM = require("./messages/inputMessagesDOM");
 const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");
+const messageEntriesDOM = require("./messages/messageEntriesDOM");
+const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM");
 
 
 function articleList() {
@@ -36,6 +38,10 @@ logInPage()
 
 
 // Dejan
+// text area and button on DOM
 document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
+// posts data put into text area on click to database
 saveMessageEntryToDatabase()
+
+
 
