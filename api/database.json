@@ -119,104 +119,21 @@
   ],
   "messages": [
     {
-      "content": "bloop",
-      "date": 1534361936830,
-      "id": 1
-    },
-    {
-      "content": "chicken tenders",
-      "date": 1534362693797,
-      "id": 2
-    },
-    {
-      "content": "bloop",
-      "date": 1534364011756,
-      "id": 3
-    },
-    {
-      "content": "bloop",
-      "userID": {
-        "id": 8,
-        "username": "bloop",
-        "email": "bloop"
-      },
-      "date": 1534364399192,
-      "id": 4
-    },
-    {
-      "content": " matt, we gotta haveg a pool party at your house homie",
-      "userID": {
-        "id": 8,
-        "username": "bloop",
-        "email": "bloop"
-      },
-      "date": 1534364442891,
-      "id": 5
-    },
-    {
-      "content": " meow",
-      "userID": {
-        "id": 8,
-        "username": "bloop",
-        "email": "bloop"
-      },
-      "date": 1534364502679,
-      "id": 6
-    },
-    {
-      "content": " bloop",
-      "userID": {
-        "id": 8,
-        "username": "bloop",
-        "email": "bloop"
-      },
-      "date": 1534364857068,
-      "id": 7
-    },
-    {
-      "content": "",
-      "date": 1534365150069,
-      "id": 8
-    },
-    {
-      "content": "",
-      "date": 1534365186205,
-      "id": 9
-    },
-    {
-      "content": "poeke",
-      "userID": 8,
-      "date": 1534365252137,
-      "id": 10
-    },
-    {
-      "content": " ",
-      "userID": 8,
-      "date": 1534365305032,
-      "id": 11
-    },
-    {
-      "content": " thanks a bunch",
-      "userID": 8,
-      "date": 1534365322471,
-      "id": 12
-    },
-    {
-      "content": "thansk more",
-      "userID": 8,
-      "userName": "bloop",
-      "date": 1534365341189,
-      "id": 13
-    },
-    {
-      "content": " zooma zoom zoom",
-      "userID": 8,
-      "userName": "bloop",
-      "date": 1534365410302,
-      "id": 14
-    },
-    {
       "content": " zoooma zooom zoom",
+      "userID": 8,
+      "userName": "bloop",
+      "date": 1534365497212,
+      "id": 15
+    },
+    {
+      "content": "bloopbloop",
+      "userID": 8,
+      "userName": "bloop",
+      "date": 1534369753295,
+      "id": 16
+    },
+    {
+      "content": "hello!",
       "userID": 8,
       "userName": "bloop",
       "date": 1534365497212,
