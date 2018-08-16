@@ -1,12 +1,14 @@
 const messageManager= require("../dataManager/messagesManager")
 const inputMessageDOM = require("./inputMessagesDOM");
+const messageEntriesDOM = require("./messageEntriesDOM");
 const session = require("../dataManager/sessionActiveUser");
 
 
 const populateMessageEntriesDOM = function(){
 
 document.querySelector(".saveEntryButton").addEventListener("click", () => {
-
+//  let inputDOM = document.getElementById(".inputDOM")
+//     inputDOM.scrollIntoView(false);
     // get form field values
     // creat object from them
     // add timestamp
@@ -24,6 +26,14 @@ const userObject = session.getActiveUser()
     messageManager.saveMessageEntry(newEntry).then(() => {
         inputMessageDOM.clearForm()
 
+        document.querySelector("#messageEntriesDOM").innerHTML = "";
+        messageManager.getMessages().then(result =>{
+            result.forEach(entry => {
+
+
+                document.querySelector("#messageEntriesDOM").innerHTML += messageEntriesDOM.renderMessageForm(entry)
+            })
+        })
 
     })
 })

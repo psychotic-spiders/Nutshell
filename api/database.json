@@ -159,6 +159,14 @@
       "email": "rrr",
       "password": "rrrr",
       "id": 20
+    },
+    {
+      "firstName": "bloop",
+      "lastName": "bloop",
+      "userName": "bloop",
+      "email": "bloop",
+      "password": "bloop",
+      "id": 21
     }
   ],
   "articles": [
@@ -199,20 +207,6 @@
       "userName": "bloop",
       "date": 1534365497212,
       "id": 15
-    },
-    {
-      "content": "bloopbloop",
-      "userID": 8,
-      "userName": "bloop",
-      "date": 1534369753295,
-      "id": 16
-    },
-    {
-      "content": "hello!",
-      "userID": 8,
-      "userName": "bloop",
-      "date": 1534438767900,
-      "id": 17
     }
   ],
   "friendship": []
