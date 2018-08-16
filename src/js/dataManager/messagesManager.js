@@ -11,16 +11,20 @@ const messageManager = Object.create(null, {
             return fetch(`http://localhost:8088/messages${id}`, {
                 method: "DELETE"
             }).then(r => r.json)
-        },
-
-        postMessages: {
-            value: () => {
+        }},
+        saveMessageEntry: {
+            value: (newEntry) => {
                 return fetch("http://localhost:8088/messages", {
-                    method: "POST"
+                    method: "POST",
+                    headers: {
+
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(newEntry)
                 }).then(r => r.json)
             }
         },
-    }
+
  })
 
  module.exports = messageManager
