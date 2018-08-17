@@ -15,9 +15,9 @@ const inputArticles = require("./articles/inputArticles");
 
 
 // Registration - Mike
-const registration = require("./registration/registration");
+/* const registration = require("./registration/registration");
 document.querySelector("#registrationForm").innerHTML = registration.renderForm();
-activateForm()
+activateForm() */
 
 // Events - Mike
 const eventsForm = require("./events/eventsForm");
