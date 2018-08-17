@@ -2,13 +2,13 @@
 
 let userManager = require("../dataManager/userManager");
 let session = require("../dataManager/sessionActiveUser");
-const logInPage =require("../LoginPage.js");
+const logInPage =require("../LoginPage");
 const $ = require("jquery");
 
 
 const activateForm = function () {
     document.querySelector("#registrationSubmitButton").addEventListener("click", () => {
-
+        const logInPage =require("../LoginPage");
         userManager.getAllUsers().then(allUsers => {
             let validFormInput = true;
 
@@ -31,9 +31,10 @@ const activateForm = function () {
                 //newUser.done(function () {
                     alert("You have successfully registered. Please log in")
                     $("#container").empty();
+                    logInPage()
                     //$("#container").html(logInPage());
                     // $("#registrationPage").hide();
-                    logInPage()
+                    //logInPage();
                     //document.querySelector("#container").innerHTML = logInPage();
                     //$("#loginPage").show();
                     // session.saveActiveUser();
@@ -41,7 +42,7 @@ const activateForm = function () {
             }
         })
         //$("#container").empty()
-        //logInPage()
+
 
         /* userManager.createUser(newUser).then(() => {
             registration.clearForm()
