@@ -186,13 +186,7 @@
     }
   ],
   "articles": [
-    {
-      "content": "here is some stuff",
-      "url": "www.google.com",
-      "title": "Stuff Title",
-      "date": "8/13/2018",
-      "userID": 3
-    }
+
   ],
   "events": [
     {
@@ -233,7 +227,21 @@
       "content": "hello!",
       "userID": 8,
       "userName": "bloop",
-      "date": 1534438767900,
+      "date": 1534365497212,
+      "id": 15
+    },
+    {
+      "content": "qwerqeqr",
+      "userID": 4,
+      "userName": "test",
+      "date": 1534438528832,
+      "id": 16
+    },
+    {
+      "content": " jadoop",
+      "userID": 4,
+      "userName": "test",
+      "date": 1534438549462,
       "id": 17
     },
     {
