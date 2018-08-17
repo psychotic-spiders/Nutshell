@@ -159,6 +159,30 @@
       "email": "rrr",
       "password": "rrrr",
       "id": 20
+    },
+    {
+      "firstName": "awehjqg",
+      "lastName": "jhgjh",
+      "userName": "jhgjh",
+      "email": "gjhgjg",
+      "password": "gjgj",
+      "id": 21
+    },
+    {
+      "firstName": "new!",
+      "lastName": "newone",
+      "userName": "newone",
+      "email": "nn",
+      "password": "nn",
+      "id": 22
+    },
+    {
+      "firstName": "test599",
+      "lastName": "mbmn",
+      "userName": "bmnb",
+      "email": "mnbmn",
+      "password": "mnbmn",
+      "id": 23
     }
   ],
   "articles": [
@@ -174,16 +198,14 @@
   ],
   "tasks": [
     {
-      "name": "Hard Task",
-      "userID": 4
+      "name": "wewe",
+      "completeDate": "wew",
+      "id": 1
     },
     {
-      "name": "Soft Task",
-      "userID": 2
-    },
-    {
-      "name": "Some other task",
-      "userID": 4
+      "name": "werwr",
+      "completeDate": "werw",
+      "id": 2
     }
   ],
   "messages": [
@@ -221,6 +243,13 @@
       "userName": "test",
       "date": 1534438549462,
       "id": 17
+    },
+    {
+      "content": "nice!",
+      "userID": 4,
+      "userName": "test",
+      "date": 1534445395689,
+      "id": 18
     }
   ],
   "friendship": []

@@ -6,16 +6,20 @@ const taskManager = Object.create(null, {
     },
 
     createTask: {
-        value: (name) => {
-            return fetch(`http://localhost:8088/tasks?name=${name}`, {
-                method: "POST"
+        value: (newTaskEntry) => {
+            return fetch("http://localhost:8088/tasks", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newTaskEntry)
             }).then(r => r.json)
         }
     },
 
     deleteTask: {
-        value: (id) => {
-            return fetch(`http://localhost:8088/entries/${id}`, {
+        value: (name) => {
+            return fetch(`http://localhost:8088/tasks?name=${name}`, {
                 method: "DELETE"
             }).then(r => r.json)
         },
