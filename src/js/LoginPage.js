@@ -2,7 +2,8 @@ const userManager = require("./dataManager/userManager.js");
 const sessionActiveUser = require("./dataManager/sessionActiveUser")
 const registration = require("./registration/registration.js")
 const activateForm = require("./registration/registrationManager")
-const loadScreen = require("./LoadUserScreen")
+const loadTasks = require("./tasksList.js")
+const loadTaskForm = require("./taskForm")
 const $ = require("jquery")
 
 //below is the DOM representation for the page:
@@ -18,9 +19,6 @@ function logInPage() {
     <input id="emailInput" type="password" placeholder="Enter Email" name="email" required>
 
     <button id="logInButton" type="submit">Login</button>
-    <br>
-    <label> <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
     <br>
     <button id="registerButton" type="button">Register</ value="Register">
 
@@ -43,7 +41,8 @@ function logInPage() {
             else {
                 sessionActiveUser.saveActiveUser(user)
                 $("#container").empty();
-                loadScreen();
+                loadTaskForm();
+                loadTasks();
                 //console.log(user)
             }
 
