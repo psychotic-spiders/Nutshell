@@ -1,5 +1,6 @@
 const loadTasks = require("./tasksList")
 const taskManager = require("./dataManager/tasksManager")
+const session = require("./dataManager/sessionActiveUser")
 
 
 function loadTaskForm() {
@@ -23,11 +24,14 @@ document.getElementById("entryTitle").value = "";
 document.getElementById("completionDate").value = ""
     }
 
+const userObject = session.getActiveUser()
+
     document.getElementById("SaveEntryButton").addEventListener("click", () => {
         const loadTasks = require("./tasksList")
         const newTaskEntry = {
             name: document.getElementById("entryTitle").value,
             completeDate: document.getElementById("completionDate").value,
+            userID: userObject.id
         }
         //POST to api
         taskManager.createTask(newTaskEntry).then(() => {
@@ -38,6 +42,9 @@ document.getElementById("completionDate").value = ""
         })
 
     })
+
+
+        
 
 }
 module.exports = loadTaskForm
