@@ -1,4 +1,4 @@
-console.log("MEOW")
+// console.log("MEOW")
 const $ = require("jquery")
 const logInPage = require("./LoginPage.js")
 const loadScreen = require("./LoadUserScreen")
@@ -6,28 +6,30 @@ const loadScreen = require("./LoadUserScreen")
 
 //const sessionActiveUser = require("./dataManager/sessionActiveUser.js")
 
-const registration = require("./registration/registration");
-const eventsForm = require("./events/eventsForm");
-const saveEvents = require("./events/saveEvents");
-const events = require("./events/events")
+// Articles 
 const activateForm = require("./registration/registrationManager");
 const articleManager = require("./dataManager/articlesManager");
 const addArtcilesDom = require("./articles/addArticlesDom");
+const saveArticleToDatabase = require("./articles/addArticlesDom")
+const inputArticles = require("./articles/inputArticles");
 
 
 // Registration - Mike
+const registration = require("./registration/registration");
 document.querySelector("#registrationForm").innerHTML = registration.renderForm();
 activateForm()
 
 // Events - Mike
+const eventsForm = require("./events/eventsForm");
+const saveEvents = require("./events/saveEvents");
+const events = require("./events/events")
 document.querySelector("#eventsForm").innerHTML = eventsForm.renderEventsForm();
 saveEvents()
+events()
 
 // Messages - Dejan
 const inputMessageDOM = require("./messages/inputMessagesDOM");
 const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");
-const saveArticleToDatabase = require("./articles/addArticlesDom")
-const inputArticles = require("./articles/inputArticles");
 const messageEntriesDOM = require("./messages/messageEntriesDOM");
 const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM");
 
@@ -39,7 +41,6 @@ function articleList() {
             console.log(entry)})
     })
 }
-events()
 articleList()
 logInPage()
 
