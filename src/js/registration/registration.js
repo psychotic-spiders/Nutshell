@@ -1,45 +1,27 @@
 // Mike - Registration
 
 const registration = Object.create(null, {
-    /* clearForm: {
-        value: () => {
-            document.querySelector("#entryTitle").value = " ",
-            document.querySelector("#entryContent").value = " "
-        }
-    }, */
-
     renderForm: {
         value: () => {
             return `
-                <div class="wrapperRegistrationInputDOM">
-                    <div id="logIn">
-                        <h2>PLACE HOLDER FOR LOGO</h2>
-                    </div>
-                    <div class="registrationInputDOM">
+                <h3>New User Form</h3>
+                <form class="registrationInputDOM">
 
-                        <label for="firstName">First Name: </label>
-                        <input required type="text" name="First Name" class="registrationInput" id="firstName"> <br>
+                    <input required type="text" name="firstName" class="registrationInput" id="firstName" placeholder="First Name"> <br>
 
-                        <label for="lastName">Last Name: </label>
-                        <input required type="text" name="Last Name" class="registrationInput" id="lastName"> <br>
+                    <input required type="text" name="lastName" class="registrationInput" id="lastName" placeholder="Last Name"> <br>
 
-                        <label for="userName">Username: </label>
-                        <input required type="text" name="userName" class="registrationInput" id="userName"> <br>
+                    <input required type="text" name="userName" class="registrationInput" id="userName" placeholder="Username"> <br>
 
-                        <label for="email">Email: </label>
-                        <input required type="text" name="email" class="registrationInput" id="email"> <br>
+                    <input required type="text" name="email" class="registrationInput" id="email" placeholder="Email"> <br>
 
-                        <label for="password">Password: </label>
-                        <input required type="text" name="password" class="registrationInput" id="password"> <br>
+                    <input required type="text" name="password" class="registrationInput" id="password" placeholder="Password"> <br>
 
-
-                        <button id="registrationSubmitButton">Submit</button>
-                    </div>
-                </div>`
+                    <button id="registrationSubmitButton">Submit</button>
+                </form>
+            `
         }
     }
 })
-
-
 
 module.exports = registration
