@@ -13,9 +13,9 @@ const activateForm = function () {
             let validFormInput = true;
 
             allUsers.forEach(users => {
-                if (users.email === document.querySelector("#email").value) {
+                if (users.email === document.querySelector("#email").value || users.userName === document.querySelector("#userName").value) {
                     validFormInput = false;
-                    alert("This email already exists. Please try again.")
+                    alert("This username or email already exists. Please try again.")
                 }
             })
             if (validFormInput) {
@@ -25,7 +25,6 @@ const activateForm = function () {
                     userName: document.querySelector("#userName").value,
                     email: document.querySelector("#email").value,
                     password: document.querySelector("#password").value,
-                    // date: Date.now()
                 });
 
                 //newUser.done(function () {
