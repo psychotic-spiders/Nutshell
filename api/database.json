@@ -161,22 +161,41 @@
       "id": 20
     },
     {
+<<<<<<< HEAD
       "firstName": "bloop",
       "lastName": "bloop",
       "userName": "bloop",
       "email": "bloop",
       "password": "bloop",
       "id": 21
+=======
+      "firstName": "awehjqg",
+      "lastName": "jhgjh",
+      "userName": "jhgjh",
+      "email": "gjhgjg",
+      "password": "gjgj",
+      "id": 21
+    },
+    {
+      "firstName": "new!",
+      "lastName": "newone",
+      "userName": "newone",
+      "email": "nn",
+      "password": "nn",
+      "id": 22
+    },
+    {
+      "firstName": "test599",
+      "lastName": "mbmn",
+      "userName": "bmnb",
+      "email": "mnbmn",
+      "password": "mnbmn",
+      "id": 23
+>>>>>>> ed752b55c225eb0e0126695a19c1a5f6e44b7863
     }
   ],
   "articles": [
-    {
-      "content": "here is some stuff",
-      "url": "www.google.com",
-      "title": "Stuff Title",
-      "date": "8/13/2018",
-      "userID": 3
-    }
+
   ],
   "events": [
     {
@@ -188,16 +207,14 @@
   ],
   "tasks": [
     {
-      "name": "Hard Task",
-      "userID": 4
+      "name": "wewe",
+      "completeDate": "wew",
+      "id": 1
     },
     {
-      "name": "Soft Task",
-      "userID": 2
-    },
-    {
-      "name": "Some other task",
-      "userID": 4
+      "name": "werwr",
+      "completeDate": "werw",
+      "id": 2
     }
   ],
   "messages": [
@@ -207,6 +224,44 @@
       "userName": "bloop",
       "date": 1534365497212,
       "id": 15
+<<<<<<< HEAD
+=======
+    },
+    {
+      "content": "bloopbloop",
+      "userID": 8,
+      "userName": "bloop",
+      "date": 1534369753295,
+      "id": 16
+    },
+    {
+      "content": "hello!",
+      "userID": 8,
+      "userName": "bloop",
+      "date": 1534365497212,
+      "id": 15
+    },
+    {
+      "content": "qwerqeqr",
+      "userID": 4,
+      "userName": "test",
+      "date": 1534438528832,
+      "id": 16
+    },
+    {
+      "content": " jadoop",
+      "userID": 4,
+      "userName": "test",
+      "date": 1534438549462,
+      "id": 17
+    },
+    {
+      "content": "nice!",
+      "userID": 4,
+      "userName": "test",
+      "date": 1534445395689,
+      "id": 18
+>>>>>>> ed752b55c225eb0e0126695a19c1a5f6e44b7863
     }
   ],
   "friendship": []
