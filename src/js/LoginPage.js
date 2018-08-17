@@ -6,6 +6,7 @@ const loadTasks = require("./tasksList.js")
 const loadTaskForm = require("./taskForm")
 const renderEventsForm = require("./events/eventsForm")
 const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM")
+const removeTasks = require("./taskDelete")
 const $ = require("jquery")
 
 //below is the DOM representation for the page:
@@ -20,7 +21,7 @@ function logInPage() {
         <label for="email"><b>Email</b></label>
     <input id="emailInput" type="password" placeholder="Enter Email" name="email" required>
 
-    <button id="logInButton" type="submit">Login</button>
+    <button id="logInButton">Login</button>
     <br>
     <button id="registerButton" type="button">Register</ value="Register">
 
@@ -46,6 +47,7 @@ function logInPage() {
                 loadTaskForm();
                 loadTasks();
                 populateMessageEntriesDOM()
+                removeTasks()
                
                 //console.log(user)
             }
