@@ -8,21 +8,10 @@ const deleteEvents = function(){
 
         const userObject = session.getActiveUser()
 
-        /* const newEvent = {
-            title: document.querySelector("#eventTitle").value,
-            location: document.querySelector("#eventLocation").value,
-            eventDate: document.querySelector("#eventDate").value,
-            content: document.querySelector("#eventContent").value,
-            userID: userObject.id,
-            userName: userObject.username,
-            date: Date.now()
-        }
+        const id = userObject.id
+            
 
-        eventsManager.postEvents(newEvent).then(() => {
-            // inputMessageDOM.clearForm()
-
-
-        }) */
+        eventsManager.deleteEvents(id)
     })
 }
 
