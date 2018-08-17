@@ -18,14 +18,14 @@ const taskManager = Object.create(null, {
     },
 
     deleteTask: {
-        value: (name) => {
-            return fetch(`http://localhost:8088/tasks?name=${name}`, {
+        value: (id) => {
+            return fetch(`http://localhost:8088/tasks/${id}`, {
                 method: "DELETE"
             }).then(r => r.json)
         },
         updateTask: {
             value: () => {
-                return fetch("http://localhost:8088/update", {
+                return fetch("http://localhost:8088/tasks", {
                     method: "PUT"
                 }).then(r => r.json)
             }
