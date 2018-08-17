@@ -37,7 +37,7 @@ const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM");
 
 
 logInPage()
-listArticles()
+//listArticles()
 
 
 
@@ -56,8 +56,8 @@ listArticles()
 // posts data put into text area on click to database
 //saveMessageEntryToDatabase()
 //Matt add to main for now -
-document.querySelector("#inputArticleDOM").innerHTML = inputArticles.renderArticleForm();
-saveArticleToDatabase()
+//document.querySelector("#inputArticleDOM").innerHTML = inputArticles.renderArticleForm();
+//saveArticleToDatabase()
 
 
 

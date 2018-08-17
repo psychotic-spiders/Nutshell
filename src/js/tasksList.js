@@ -21,14 +21,13 @@ function loadTasks() {
       document.getElementById("container").innerHTML += `
         <h4>Task: ${element.name}</h4>
         <h5>Date to complete: ${element.completeDate}</h5>
-        <button id="removeIt> <input type="button" name="completed">
-        Completed</button>
+        <input type="checkbox" name="completed" value="completed" id="completed--${element.id}">Completed<br>
         `
 
     })
   })
 
-
+  
 
 //will need to use split and will need to have unique id through add process
 /*
