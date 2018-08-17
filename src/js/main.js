@@ -47,12 +47,12 @@ logInPage()
 // Dejan
 // text area and button on DOM
 
-document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
+//document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
 // posts data put into text area on click to database
-saveMessageEntryToDatabase()
+//saveMessageEntryToDatabase()
 //Matt add to main for now -
-document.querySelector("#inputArticleDOM").innerHTML = inputArticles.renderArticleForm();
-saveArticleToDatabase()
+//document.querySelector("#inputArticleDOM").innerHTML = inputArticles.renderArticleForm();
+//saveArticleToDatabase()
 
 
 

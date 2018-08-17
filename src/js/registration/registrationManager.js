@@ -33,7 +33,8 @@ const activateForm = function () {
                     $("#container").empty();
                     //$("#container").html(logInPage());
                     // $("#registrationPage").hide();
-                    document.querySelector("#container").innerHTML = logInPage();
+                    logInPage()
+                    //document.querySelector("#container").innerHTML = logInPage();
                     //$("#loginPage").show();
                     // session.saveActiveUser();
                 //});
