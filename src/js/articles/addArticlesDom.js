@@ -21,22 +21,6 @@ const userObject = session.getActiveUser()
         Synopsis: document.querySelector("#symClass").value,
     }
 
-    // START HERE    document.querySelector(".deleteButton").addEventListener("click", () => {
-
-    //     // looking to Delete selected text and by ID? Matt
-
-    // const userObject = session.getActiveUser()
-    // // send data to session storage by category Matt
-    //     const newArticle = {
-    //         content: document.querySelector("#titleClass").value,
-    //         // userID: userObject.id,
-    //         // userName: userObject.username,
-    //         URL: document.querySelector("#URLClass").value,
-    //         date: Date.now(),
-    //         Synopsis: document.querySelector("#symClass").value,
-    // // post to api
-    // // clear form fields
-    // put html representation to DOM
     articleManager.saveArticleEntry(newArticle).then(() => {
         inputArticles.clearArticleForm()
 
