@@ -185,15 +185,37 @@
       "id": 23
     }
   ],
-  "articles": [
-
-  ],
+  "articles": [],
   "events": [
     {
-      "name": "Fun Event!",
-      "date": "8/25/2018",
+      "title": "Mike's Birthday",
       "location": "Nashville, TN",
-      "userID": 3
+      "eventDate": "11/18/2018",
+      "content": "Oh damn, I'll be 30.",
+      "userID": 4,
+      "userName": "test",
+      "date": 1534517859181,
+      "id": 1
+    },
+    {
+      "title": "Another Day",
+      "location": "Nashville, TN",
+      "eventDate": "8/17/2018",
+      "content": "Working at NSS",
+      "userID": 4,
+      "userName": "test",
+      "date": 1534517923287,
+      "id": 2
+    },
+    {
+      "title": "Next Month",
+      "location": "Nashville, TN",
+      "eventDate": "9/1/2018",
+      "content": "Checking Dates",
+      "userID": 4,
+      "userName": "test",
+      "date": 1534517977590,
+      "id": 3
     }
   ],
   "tasks": [
