@@ -1,7 +1,7 @@
 // console.log("MEOW")
 const $ = require("jquery")
 const logInPage = require("./LoginPage.js")
-const loadScreen = require("./LoadUserScreen")
+const loadScreen = require("./tasksList.js")
 //const taskManager = require("./dataManager/tasksManager")
 
 //const sessionActiveUser = require("./dataManager/sessionActiveUser.js")
@@ -52,8 +52,10 @@ logInPage()
 
 
 
+
 // Dejan
 // text area and button on DOM
+
 document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
 // posts data put into text area on click to database
 saveMessageEntryToDatabase()
