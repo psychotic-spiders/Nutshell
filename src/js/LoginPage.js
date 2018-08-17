@@ -4,6 +4,7 @@ const registration = require("./registration/registration.js")
 const activateForm = require("./registration/registrationManager")
 const loadTasks = require("./tasksList.js")
 const loadTaskForm = require("./taskForm")
+const renderEventsForm = require("./events/eventsForm")
 const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM")
 const $ = require("jquery")
 
@@ -45,6 +46,7 @@ function logInPage() {
                 loadTaskForm();
                 loadTasks();
                 populateMessageEntriesDOM()
+               
                 //console.log(user)
                 // Events - Mike
                 const eventsForm = require("./events/eventsForm");
