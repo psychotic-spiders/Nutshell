@@ -46,6 +46,15 @@ function logInPage() {
                 loadTasks();
                 populateMessageEntriesDOM()
                 //console.log(user)
+                // Events - Mike
+                const eventsForm = require("./events/eventsForm");
+                const saveEvents = require("./events/saveEvents");
+                const events = require("./events/events")
+                document.querySelector("#eventsForm").innerHTML = eventsForm.renderEventsForm();
+                const deleteEvents = require("./events/deleteEvents");
+                saveEvents()
+                events()
+                deleteEvents()
             }
 
 

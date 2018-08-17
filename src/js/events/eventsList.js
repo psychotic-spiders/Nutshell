@@ -1,4 +1,3 @@
-const session = require("../dataManager/sessionActiveUser");
 let eventCard = require("./eventCard");
 
 function eventList(result) {
