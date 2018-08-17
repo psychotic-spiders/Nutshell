@@ -11,7 +11,9 @@ function eventCard(title, location, eventDate, content, userName) {
             <div class="card-footer">
                 <p class="card-text">Created by: ${userName}</p>
             </div>
-        </div>
+            <button id="editEventsButton">Edit</button>
+            <button id="deleteEventsButton">Delete</button>
+            </div>
     `;
 }
 

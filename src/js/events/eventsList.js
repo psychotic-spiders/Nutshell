@@ -2,10 +2,8 @@ const session = require("../dataManager/sessionActiveUser");
 let eventCard = require("./eventCard");
 
 function eventList(result) {
-    /* let filteredData = function (id) {
-        return id === session.getActiveUser() 
-    } */
-    result.forEach(item => {
+    let sortedData = result.sort(function(a, b){return b.eventDate - a.eventDate})
+    sortedData.forEach(item => {
         writeEventToDOM(eventCard(item.title, item.location, item.eventDate, item.content, item.userName))
     });
 }

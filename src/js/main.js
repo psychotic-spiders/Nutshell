@@ -9,7 +9,7 @@ const loadScreen = require("./LoadUserScreen")
 // Articles 
 const activateForm = require("./registration/registrationManager");
 const articleManager = require("./dataManager/articlesManager");
-const addArtcilesDom = require("./articles/addArticlesDom");
+const addArticlesDom = require("./articles/addArticlesDom");
 const saveArticleToDatabase = require("./articles/addArticlesDom")
 const inputArticles = require("./articles/inputArticles");
 
