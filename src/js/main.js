@@ -6,12 +6,13 @@ const loadScreen = require("./tasksList.js")
 
 //const sessionActiveUser = require("./dataManager/sessionActiveUser.js")
 
-// Articles 
+// Articles
 const activateForm = require("./registration/registrationManager");
 const articleManager = require("./dataManager/articlesManager");
 const addArticlesDom = require("./articles/addArticlesDom");
 const saveArticleToDatabase = require("./articles/addArticlesDom")
 const inputArticles = require("./articles/inputArticles");
+const listArticles = require("./articles/articleList")
 
 
 // Registration - Mike
@@ -33,16 +34,11 @@ const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");
 const messageEntriesDOM = require("./messages/messageEntriesDOM");
 const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM");
 
-//wtf is this?
-function articleList() {
-    articleManager.getArticles()
-    .then(r => {
-        r.forEach(entry => {
-            console.log(entry)})
-    })
-}
-articleList()
+
+
 logInPage()
+listArticles()
+
 
 
 
@@ -60,8 +56,8 @@ logInPage()
 // posts data put into text area on click to database
 //saveMessageEntryToDatabase()
 //Matt add to main for now -
-//document.querySelector("#inputArticleDOM").innerHTML = inputArticles.renderArticleForm();
-//saveArticleToDatabase()
+document.querySelector("#inputArticleDOM").innerHTML = inputArticles.renderArticleForm();
+saveArticleToDatabase()
 
 
 
