@@ -6,7 +6,7 @@ const loadScreen = require("./tasksList.js")
 
 //const sessionActiveUser = require("./dataManager/sessionActiveUser.js")
 
-// Articles 
+// Articles
 const activateForm = require("./registration/registrationManager");
 const articleManager = require("./dataManager/articlesManager");
 const addArticlesDom = require("./articles/addArticlesDom");
@@ -56,9 +56,9 @@ logInPage()
 // Dejan
 // text area and button on DOM
 
-//document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
+document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
 // posts data put into text area on click to database
-//saveMessageEntryToDatabase()
+saveMessageEntryToDatabase()
 //Matt add to main for now -
 //document.querySelector("#inputArticleDOM").innerHTML = inputArticles.renderArticleForm();
 //saveArticleToDatabase()

@@ -6,9 +6,15 @@ const messageManager = Object.create(null, {
         }
     },
 
+    getSingleMessage: {
+        value: (id) => {
+            return fetch(`http://localhost:8088/messages/${id}`).then(r => r.json())
+        }
+    },
+
     deleteMessages: {
         value: (id) => {
-            return fetch(`http://localhost:8088/messages${id}`, {
+            return fetch(`http://localhost:8088/messages/${id}`, {
                 method: "DELETE"
             }).then(r => r.json)
         }},
@@ -24,6 +30,19 @@ const messageManager = Object.create(null, {
                 }).then(r => r.json)
             }
         },
+        replaceEntry: {
+            value: (entryId, entry) => {
+                return fetch(`http://localhost:8088/messages/${entryId}`, {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(entry)
+                })
+                .then(result => result.json())
+            }
+        }
+
 
  })
 
