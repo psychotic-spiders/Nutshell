@@ -4,6 +4,7 @@ const registration = require("./registration/registration.js")
 const activateForm = require("./registration/registrationManager")
 const loadTasks = require("./tasksList.js")
 const loadTaskForm = require("./taskForm")
+const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM")
 const $ = require("jquery")
 
 //below is the DOM representation for the page:
@@ -43,6 +44,7 @@ function logInPage() {
                 $("#container").empty();
                 loadTaskForm();
                 loadTasks();
+                populateMessageEntriesDOM()
                 //console.log(user)
             }
 

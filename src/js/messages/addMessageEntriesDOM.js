@@ -12,7 +12,7 @@ function populateMessageEntriesDOM() {
 
     })
 }
-populateMessageEntriesDOM()
+//populateMessageEntriesDOM()
 // document.querySelector("#messageEndriesDOM").addEventListener("click", (event) => {
 //     console.log(event);
 //     if(event.target.id.split("--")[0] === "delete"){
