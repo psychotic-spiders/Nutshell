@@ -1,8 +1,11 @@
 // Matt Promises
+// ?_order=desc&_sort=id will sort in reverse
+
+
 const articleManager = Object.create(null, {
     getArticles: {
         value: () => {
-            return fetch("http://localhost:8088/articles").then(r => r.json())
+            return fetch("http://localhost:8088/articles?_order=desc&_sort=id").then(r => r.json())
         }
     },
 
