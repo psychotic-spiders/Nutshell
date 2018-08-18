@@ -1,13 +1,10 @@
-const userManager = require("./dataManager/userManager.js");
+const userManager = require("./dataManager/userManager.js")
 const sessionActiveUser = require("./dataManager/sessionActiveUser")
 const registration = require("./registration/registration.js")
 const activateForm = require("./registration/registrationManager")
 const loadTasks = require("./tasks/tasksList.js")
 const loadTaskForm = require("./tasks/taskForm.js")
-const renderEventsForm = require("./events/eventsForm")
-const saveEvents = require("./events/saveEvents")
-const events = require("./events/eventsList")
-const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM")
+//const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM")
 const removeTasks = require("./tasks/taskDelete.js")
 const $ = require("jquery")
 const renderArticleForm = require("./articles/inputArticles")
@@ -16,8 +13,9 @@ const inputArticles = require("./articles/inputArticles")
 const listArticles = require("./articles/articleList")
 const editTasks = require("./tasks/taskEdit")
 const removeArticles = require("./articles/articleDelete")
-
-// dejan
+const renderEventsForm = require("./events/eventsForm")
+const saveEvents = require("./events/saveEvents")
+const events = require("./events/eventsList")
 const inputMessageDOM = require("./messages/inputMessagesDOM");
 const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");
 const populateMessageEntriesDOMs = require("./messages/addMessageEntriesDOM");
@@ -64,18 +62,11 @@ function logInPage() {
                 // posts data put into text area on click to database
                 saveMessageEntryToDatabase()
                 populateMessageEntriesDOMs()
-
-
-
-
-
-
                 removeTasks()
                 //editTasks()
                 document.getElementById("newTask").innerHTML = `
                 <button id="addNewTask">Add New Task</button>
                `
-            
                 document.getElementById("addNewTask").addEventListener("click", loadTaskForm)
                 //renderArticleForm()
                 listArticles()
@@ -87,8 +78,6 @@ function logInPage() {
                 events()
                 
                 
-
-
                 //console.log(user)
                 // Events - Mike
                 const eventsForm = require("./events/eventsForm");
