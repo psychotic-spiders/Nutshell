@@ -9,7 +9,7 @@ function populateMessageEntriesDOM() {
         // console.log(result.length)
         result.forEach(entry => {
             // puts existing messages onto DOM
-            document.querySelector("#messageEntriesDOM").innerHTML += messageDOMManager.renderMessageForm(entry)
+            document.querySelector("#messageEntriesDOM").innerHTML += messageDOMManager.messageHTML(entry)
         })
 
     })

@@ -4,10 +4,14 @@ const registration = require("./registration/registration.js")
 const activateForm = require("./registration/registrationManager")
 const loadTasks = require("./tasksList.js")
 const loadTaskForm = require("./taskForm")
+const renderEventsForm = require("./events/eventsForm")
 // const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM")
-// const inputMessageDOM = require("./messages/inputMessagesDOM");
-// const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");
+const removeTasks = require("./taskDelete")
 const $ = require("jquery")
+const renderArticleForm = require("./articles/inputArticles")
+const saveArticleToDatabase = require("./articles/addArticlesDom")
+const inputArticles = require("./articles/inputArticles")
+const listArticles = require("./articles/articleList")
 
 // dejan
 const inputMessageDOM = require("./messages/inputMessagesDOM");
@@ -26,9 +30,9 @@ function logInPage() {
         <label for="email"><b>Email</b></label>
     <input id="emailInput" type="password" placeholder="Enter Email" name="email" required>
 
-    <button id="logInButton" type="submit">Login</button>
+    <button id="logInButton">Login</button>
     <br>
-    <button id="registerButton" type="button">Register</ value="Register">
+    <button id="registerButton" type="button">Register</button>
 
     </div>
 
@@ -51,20 +55,29 @@ function logInPage() {
                 $("#container").empty();
                 loadTaskForm();
                 loadTasks();
-                // populateMessageEntriesDOM()
 
-                //console.log(user)
-                // renderMessageForm()
-                // document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
-
-                // document.querySelector("#messageEntriesDOM").innerHTML += messageEntriesDOM.renderMessageForm(entry)
-
-
-                // input
                 document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
                 // posts data put into text area on click to database
                 saveMessageEntryToDatabase()
                 populateMessageEntriesDOM()
+                // populateMessageEntriesDOM()
+                removeTasks()
+                //renderArticleForm()
+                listArticles()
+                document.querySelector("#inputArticleDOM").innerHTML = inputArticles.renderArticleForm();
+                saveArticleToDatabase()
+
+
+                //console.log(user)
+                // Events - Mike
+                const eventsForm = require("./events/eventsForm");
+                const saveEvents = require("./events/saveEvents");
+                const events = require("./events/events")
+                document.querySelector("#eventsForm").innerHTML = eventsForm.renderEventsForm();
+                const deleteEvents = require("./events/deleteEvents");
+                saveEvents()
+                events()
+                deleteEvents()
             }
 
 
