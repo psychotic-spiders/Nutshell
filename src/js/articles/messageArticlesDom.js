@@ -14,5 +14,4 @@ const messageArticlesDOM = Object.create(null, {
 },
 })
 
-
 module.exports = messageArticlesDOM

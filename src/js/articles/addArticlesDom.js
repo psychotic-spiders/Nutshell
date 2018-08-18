@@ -3,6 +3,7 @@
 const articleManager = require("../dataManager/articlesManager")
 const inputArticles = require("./inputArticles");
 const session = require("../dataManager/sessionActiveUser");
+const messageArticlesDOM = require("./messageArticlesDom")
 
 const saveArtcileToDatabase = function(){
 
@@ -24,8 +25,19 @@ const userObject = session.getActiveUser()
     articleManager.saveArticleEntry(newArticle).then(() => {
         inputArticles.clearArticleForm()
 
+        document.querySelector("#inputArticleDOM").innerHTML = "";
+        artcileManager.getArticles().then(result =>{
+            result.forEach(entry => {
+
+
+                document.querySelector("#inputArticleDOM").innerHTML += messageArticlesDOM.articleHTML(entry)
     })
+
+
 })
-}
+})})}
+
 
 module.exports = saveArtcileToDatabase
+
+
