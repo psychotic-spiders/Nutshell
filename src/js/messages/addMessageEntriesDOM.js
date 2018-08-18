@@ -3,18 +3,18 @@ const messageDOMManager= require("./messageEntriesDOM")
 // const editManager= require("./editMessagesDOM")
 
 // GET ALL ENTRIES ONTO THE DOM
-function populateMessageEntriesDOM() {
+function populateMessageEntriesDOMs() {
     document.querySelector("#messageEntriesDOM").innerHTML = "";
     messageManager.getMessages().then(result => {
         // console.log(result.length)
         result.forEach(entry => {
             // puts existing messages onto DOM
-            document.querySelector("#messageEntriesDOM").innerHTML += messageDOMManager.messageHTML(entry)
+            document.querySelector("#messageEntriesDOM").innerHTML += messageDOMManager.renderMessageForm(entry)
         })
 
     })
 }
-// populateMessageEntriesDOM()
+// populateMessageEntriesDOMs()
 
 // Delete Button
 document.querySelector("#messageEntriesDOM").addEventListener("click", (event) => {
@@ -25,7 +25,7 @@ document.querySelector("#messageEntriesDOM").addEventListener("click", (event) =
         console.log(id);
         //calls the deleteEntries function so that the entry is deleted on the Database.
         messageManager.deleteMessages(id).then(()=> {
-            populateMessageEntriesDOM()
+            populateMessageEntriesDOMs()
         })
 
     }
@@ -47,5 +47,5 @@ document.querySelector("#messageEntriesDOM").addEventListener("click", (event) =
 
 
 //     }})
-module.exports = populateMessageEntriesDOM;
+module.exports = populateMessageEntriesDOMs;
 

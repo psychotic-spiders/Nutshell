@@ -18,8 +18,7 @@ const populateMessageEntriesDOM = function () {
 
 
     document.querySelector(".saveEntryButton").addEventListener("click", () => {
-        //  let inputDOM = document.getElementById(".inputDOM")
-            // inputDOM.scrollIntoView(false);
+
         // get form field values
         // creat object from them
         // add timestamp

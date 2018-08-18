@@ -5,7 +5,7 @@ const activateForm = require("./registration/registrationManager")
 const loadTasks = require("./tasksList.js")
 const loadTaskForm = require("./taskForm")
 const renderEventsForm = require("./events/eventsForm")
-// const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM")
+
 const removeTasks = require("./taskDelete")
 const $ = require("jquery")
 const renderArticleForm = require("./articles/inputArticles")
@@ -16,7 +16,7 @@ const listArticles = require("./articles/articleList")
 // dejan
 const inputMessageDOM = require("./messages/inputMessagesDOM");
 const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");
-const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM");
+const populateMessageEntriesDOMs = require("./messages/addMessageEntriesDOM");
 
 //below is the DOM representation for the page:
 function logInPage() {
@@ -59,8 +59,13 @@ function logInPage() {
                 document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
                 // posts data put into text area on click to database
                 saveMessageEntryToDatabase()
-                populateMessageEntriesDOM()
-                // populateMessageEntriesDOM()
+                populateMessageEntriesDOMs()
+
+
+
+
+
+
                 removeTasks()
                 //renderArticleForm()
                 listArticles()
