@@ -24,4 +24,6 @@ const inputMessageDOM = Object.create(null, {
 
     })
 
+    // document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
+
 module.exports = inputMessageDOM

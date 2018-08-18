@@ -4,8 +4,15 @@ const registration = require("./registration/registration.js")
 const activateForm = require("./registration/registrationManager")
 const loadTasks = require("./tasksList.js")
 const loadTaskForm = require("./taskForm")
-const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM")
+// const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM")
+// const inputMessageDOM = require("./messages/inputMessagesDOM");
+// const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");
 const $ = require("jquery")
+
+// dejan
+const inputMessageDOM = require("./messages/inputMessagesDOM");
+const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");
+const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM");
 
 //below is the DOM representation for the page:
 function logInPage() {
@@ -44,8 +51,20 @@ function logInPage() {
                 $("#container").empty();
                 loadTaskForm();
                 loadTasks();
-                populateMessageEntriesDOM()
+                // populateMessageEntriesDOM()
+
                 //console.log(user)
+                // renderMessageForm()
+                // document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
+
+                // document.querySelector("#messageEntriesDOM").innerHTML += messageEntriesDOM.renderMessageForm(entry)
+
+
+                // input
+                document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
+                // posts data put into text area on click to database
+                saveMessageEntryToDatabase()
+                populateMessageEntriesDOM()
             }
 
 

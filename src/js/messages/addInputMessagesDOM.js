@@ -3,7 +3,7 @@ const inputMessageDOM = require("./inputMessagesDOM");
 const messageEntriesDOM = require("./messageEntriesDOM");
 const session = require("../dataManager/sessionActiveUser");
 
-
+// document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
 const editMode = {
     "enable": false,
     "entryId": null
@@ -11,9 +11,15 @@ const editMode = {
 
 const populateMessageEntriesDOM = function () {
 
+    // document.querySelector("body").addEventListener("click", () => {
+    //     if(event.target.className === "saveEntryButton"){
+
+
+
+
     document.querySelector(".saveEntryButton").addEventListener("click", () => {
         //  let inputDOM = document.getElementById(".inputDOM")
-        //     inputDOM.scrollIntoView(false);
+            // inputDOM.scrollIntoView(false);
         // get form field values
         // creat object from them
         // add timestamp
@@ -68,6 +74,9 @@ const populateMessageEntriesDOM = function () {
         }
 
     })
+    //       }
+
+    // })
 }
 
 // edit button

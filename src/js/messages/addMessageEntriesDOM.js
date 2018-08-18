@@ -14,7 +14,7 @@ function populateMessageEntriesDOM() {
 
     })
 }
-populateMessageEntriesDOM()
+// populateMessageEntriesDOM()
 
 // Delete Button
 document.querySelector("#messageEntriesDOM").addEventListener("click", (event) => {
