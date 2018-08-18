@@ -12,6 +12,7 @@ const renderArticleForm = require("./articles/inputArticles")
 const saveArticleToDatabase = require("./articles/addArticlesDom")
 const inputArticles = require("./articles/inputArticles")
 const listArticles = require("./articles/articleList")
+const removeArticles = require("./articles/articleDelete")
 
 //below is the DOM representation for the page:
 function logInPage() {
@@ -54,10 +55,11 @@ function logInPage() {
                 removeTasks()
                 //renderArticleForm()
                 listArticles()
+                removeArticles()
                 document.querySelector("#inputArticleDOM").innerHTML = inputArticles.renderArticleForm();
                 saveArticleToDatabase()
 
-               
+
                 //console.log(user)
             }
 

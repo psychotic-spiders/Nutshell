@@ -7,7 +7,7 @@ const messageArticlesDOM = Object.create(null, {
                 <h3>${data.content}</h3>
                     <p>${data.Synopsis}</p>
                     <p>${data.URL}</p>
-                        <button id="delete!${data.id}"type="button">Delete</button>
+                        <button id="deleteArticle--${data.id}"type="button">Delete</button>
                 </div>
             </div>`
         }
