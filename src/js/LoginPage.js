@@ -22,7 +22,7 @@ function logInPage() {
 
     <button id="logInButton" type="submit">Login</button>
     <br>
-    <button id="registerButton" type="button">Register</ value="Register">
+    <button id="registerButton" type="button">Register</button>
 
     </div>
 

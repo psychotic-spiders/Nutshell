@@ -5,7 +5,7 @@ const registration = Object.create(null, {
         value: () => {
             return `
                 <h3>New User Form</h3>
-                <form class="registrationInputDOM">
+                <div class="registrationInputDOM">
 
                     <input required type="text" name="firstName" class="registrationInput" id="firstName" placeholder="First Name"> <br>
 
@@ -18,7 +18,7 @@ const registration = Object.create(null, {
                     <input required type="text" name="password" class="registrationInput" id="password" placeholder="Password"> <br>
 
                     <button id="registrationSubmitButton">Submit</button>
-                </form>
+                </div>
             `
         }
     }
