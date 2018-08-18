@@ -28,7 +28,7 @@ function logInPage() {
 
     <button id="logInButton">Login</button>
     <br>
-    <button id="registerButton" type="button">Register</ value="Register">
+    <button id="registerButton" type="button">Register</button>
 
     </div>
 
@@ -61,6 +61,15 @@ function logInPage() {
 
 
                 //console.log(user)
+                // Events - Mike
+                const eventsForm = require("./events/eventsForm");
+                const saveEvents = require("./events/saveEvents");
+                const events = require("./events/events")
+                document.querySelector("#eventsForm").innerHTML = eventsForm.renderEventsForm();
+                const deleteEvents = require("./events/deleteEvents");
+                saveEvents()
+                events()
+                deleteEvents()
             }
 
 

@@ -14,19 +14,7 @@ const saveArticleToDatabase = require("./articles/addArticlesDom")
 const inputArticles = require("./articles/inputArticles");
 const listArticles = require("./articles/articleList")
 
-
-// Registration - Mike
-/* const registration = require("./registration/registration");
-document.querySelector("#registrationForm").innerHTML = registration.renderForm();
-activateForm() */
-
-// Events - Mike
-const eventsForm = require("./events/eventsForm");
-const saveEvents = require("./events/saveEvents");
-const events = require("./events/events")
-document.querySelector("#eventsForm").innerHTML = eventsForm.renderEventsForm();
-saveEvents()
-events()
+// deleteEvents()
 
 // Messages - Dejan
 const inputMessageDOM = require("./messages/inputMessagesDOM");
