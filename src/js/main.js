@@ -1,7 +1,7 @@
 // console.log("MEOW")
 const $ = require("jquery")
 const logInPage = require("./LoginPage.js")
-const loadScreen = require("./tasksList.js")
+const loadScreen = require("./tasks/tasksList.js")
 //const taskManager = require("./dataManager/tasksManager")
 
 //const sessionActiveUser = require("./dataManager/sessionActiveUser.js")
@@ -24,9 +24,9 @@ activateForm() */
 const eventsForm = require("./events/eventsForm");
 const saveEvents = require("./events/saveEvents");
 const events = require("./events/events")
-document.querySelector("#eventsForm").innerHTML = eventsForm.renderEventsForm();
-saveEvents()
-events()
+//document.querySelector("#eventsForm").innerHTML = eventsForm.renderEventsForm();
+//saveEvents()
+//events()
 
 // Messages - Dejan
 const inputMessageDOM = require("./messages/inputMessagesDOM");

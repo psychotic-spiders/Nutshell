@@ -1,8 +1,11 @@
+//below loads the form for adding new tasks
+const $ = require("jquery")
 const loadTasks = require("./tasksList")
-const taskManager = require("./dataManager/tasksManager")
-const session = require("./dataManager/sessionActiveUser")
+const taskManager = require("../dataManager/tasksManager")
+const session = require("../dataManager/sessionActiveUser")
 
 
+//document.getElementById("addNewTask").addEventListener("click", loadTaskForm())
 function loadTaskForm() {
     const addForm = document.getElementById("taskForm");
     addForm.innerHTML = `
@@ -16,6 +19,7 @@ function loadTaskForm() {
 </fieldset>
 
 <button id="SaveEntryButton">Save Entry</button>
+<button id"EditButton">Edit</button>
 `
 
 
@@ -38,6 +42,7 @@ const userObject = session.getActiveUser()
             clearForm()})
             .then(() => {
             //console.log(loadTasks())
+            $("#taskForm").hide()
             loadTasks()
         })
 

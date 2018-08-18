@@ -24,9 +24,9 @@ const taskManager = Object.create(null, {
             }).then(r => r.json)
         },
         updateTask: {
-            value: () => {
-                return fetch("http://localhost:8088/tasks", {
-                    method: "PUT"
+            value: (id) => {
+                return fetch(`http://localhost:8088/tasks/${id}`, {
+                    method: "PATCH"
                 }).then(r => r.json)
             }
         },

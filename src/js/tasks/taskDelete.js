@@ -1,5 +1,5 @@
 // Handle delete button clicks
-const taskManager = require("./dataManager/tasksManager")
+const taskManager = require("../dataManager/tasksManager")
 const loadTasks = require("./tasksList")
 
 
