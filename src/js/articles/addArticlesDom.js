@@ -26,7 +26,7 @@ const saveArtcileToDatabase = function () {
             inputArticles.clearArticleForm()
 
             document.querySelector("#inputArticleDOM").innerHTML = "";
-            artcileManager.getArticles().then(result =>{
+            articleManager.getArticles().then(result =>{
                 result.forEach(entry => {
 
 
