@@ -15,6 +15,12 @@ const saveArticleToDatabase = require("./articles/addArticlesDom")
 const inputArticles = require("./articles/inputArticles")
 const listArticles = require("./articles/articleList")
 const editTasks = require("./tasks/taskEdit")
+const removeArticles = require("./articles/articleDelete")
+
+// dejan
+const inputMessageDOM = require("./messages/inputMessagesDOM");
+const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");
+const populateMessageEntriesDOMs = require("./messages/addMessageEntriesDOM");
 
 //below is the DOM representation for the page:
 function logInPage() {
@@ -30,7 +36,7 @@ function logInPage() {
 
     <button id="logInButton">Login</button>
     <br>
-    <button id="registerButton" type="button">Register</ value="Register">
+    <button id="registerButton" type="button">Register</button>
 
     </div>
 
@@ -53,7 +59,17 @@ function logInPage() {
                 $("#container").empty();
                 //loadTaskForm();
                 loadTasks();
-                populateMessageEntriesDOM()
+
+                document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
+                // posts data put into text area on click to database
+                saveMessageEntryToDatabase()
+                populateMessageEntriesDOMs()
+
+
+
+
+
+
                 removeTasks()
                 //editTasks()
                 document.getElementById("newTask").innerHTML = `
@@ -63,6 +79,7 @@ function logInPage() {
                 document.getElementById("addNewTask").addEventListener("click", loadTaskForm)
                 //renderArticleForm()
                 listArticles()
+                removeArticles()
                 document.querySelector("#inputArticleDOM").innerHTML = inputArticles.renderArticleForm();
                 saveArticleToDatabase()
                 document.querySelector("#eventsForm").innerHTML = eventsForm.renderEventsForm();
@@ -71,8 +88,17 @@ function logInPage() {
                 
                 
 
-               
+
                 //console.log(user)
+                // Events - Mike
+                const eventsForm = require("./events/eventsForm");
+                const saveEvents = require("./events/saveEvents");
+                const events = require("./events/events")
+                document.querySelector("#eventsForm").innerHTML = eventsForm.renderEventsForm();
+                const deleteEvents = require("./events/deleteEvents");
+                saveEvents()
+                events()
+                deleteEvents()
             }
 
 

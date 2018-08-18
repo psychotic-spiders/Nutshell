@@ -24,4 +24,6 @@ const inputMessageDOM = Object.create(null, {
 
     })
 
+
+
 module.exports = inputMessageDOM

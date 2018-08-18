@@ -1,29 +1,22 @@
 // Mike - Events
 let eventsManager = require("../dataManager/eventsManager");
-const session = require("../dataManager/sessionActiveUser");
 
-const deleteEvents = function(){
+const deleteEvents = function () {
 
-    document.querySelector("#deleteEventsButton").addEventListener("click", () => {
-
-        const userObject = session.getActiveUser()
-
-        /* const newEvent = {
-            title: document.querySelector("#eventTitle").value,
-            location: document.querySelector("#eventLocation").value,
-            eventDate: document.querySelector("#eventDate").value,
-            content: document.querySelector("#eventContent").value,
-            userID: userObject.id,
-            userName: userObject.username,
-            date: Date.now()
+    document.querySelector("#deleteEventsButton").addEventListener("click", (event) => {
+        console.log(event);
+        if(event.target.id.split("--")[0] === "delete"){
+            console.log("Hey!", event.target.id);
+            let id = event.target.id.split("--")[1]
+            console.log(id);
+            //calls the deleteEntries function so that the entry is deleted on the Database.
+            eventsManager.deleteEvents(id).then(()=> {
+                eventList()
+            })
+     
         }
-
-        eventsManager.postEvents(newEvent).then(() => {
-            // inputMessageDOM.clearForm()
-
-
-        }) */
-    })
+     
+     })
 }
 
 module.exports = deleteEvents

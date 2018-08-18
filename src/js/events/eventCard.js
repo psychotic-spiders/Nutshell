@@ -1,6 +1,6 @@
 function eventCard(title, location, eventDate, content, userName) {
     return `
-        <div class="card text-center">
+        <div id="" class="card text-center">
             <div class="card-header">
                 <h4>${title}</h4>
                 <h3>${eventDate} | ${location}</h3>
