@@ -2,6 +2,7 @@
 let eventsManager = require("../dataManager/eventsManager");
 const session = require("../dataManager/sessionActiveUser");
 
+
 const saveEvents = function(){
 
     document.querySelector("#saveEventsButton").addEventListener("click", () => {
