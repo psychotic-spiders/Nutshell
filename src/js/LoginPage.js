@@ -6,7 +6,12 @@ const loadTasks = require("./tasksList.js")
 const loadTaskForm = require("./taskForm")
 const renderEventsForm = require("./events/eventsForm")
 const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM")
+const removeTasks = require("./taskDelete")
 const $ = require("jquery")
+const renderArticleForm = require("./articles/inputArticles")
+const saveArticleToDatabase = require("./articles/addArticlesDom")
+const inputArticles = require("./articles/inputArticles")
+const listArticles = require("./articles/articleList")
 
 //below is the DOM representation for the page:
 function logInPage() {
@@ -20,7 +25,7 @@ function logInPage() {
         <label for="email"><b>Email</b></label>
     <input id="emailInput" type="password" placeholder="Enter Email" name="email" required>
 
-    <button id="logInButton" type="submit">Login</button>
+    <button id="logInButton">Login</button>
     <br>
     <button id="registerButton" type="button">Register</button>
 
@@ -46,6 +51,12 @@ function logInPage() {
                 loadTaskForm();
                 loadTasks();
                 populateMessageEntriesDOM()
+                removeTasks()
+                //renderArticleForm()
+                listArticles()
+                document.querySelector("#inputArticleDOM").innerHTML = inputArticles.renderArticleForm();
+                saveArticleToDatabase()
+
                
                 //console.log(user)
                 // Events - Mike

@@ -7,24 +7,28 @@ function populateMessageEntriesDOM() {
         console.log(result.length)
         result.forEach(entry => {
             // puts existing messages onto DOM
-            document.querySelector("#messageEntriesDOM").innerHTML += messageDOMManager.renderMessageForm(entry)
+            document.querySelector("#messageEntriesDOM").innerHTML += messageDOMManager.messageHTML(entry)
         })
 
     })
 }
+
+
 //populateMessageEntriesDOM()
-// document.querySelector("#messageEndriesDOM").addEventListener("click", (event) => {
-//     console.log(event);
-//     if(event.target.id.split("--")[0] === "delete"){
-//         console.log("Hey!", event.target.id);
-//         let id = event.target.id.split("--")[1]
-//         console.log(id);
-//         //calls the deleteEntries function so that the entry is deleted on the Database.
-//         messageManager.deleteMessages(id).then(()=> {
-//             listMessages()
-//         })
+document.querySelector("#messageEntriesDOM").addEventListener("click", (event) => {
+    console.log(event);
+    if(event.target.id.split("--")[0] === "delete"){
+        console.log("Hey!", event.target.id);
+        let id = event.target.id.split("--")[1]
+        console.log(id);
+        //calls the deleteEntries function so that the entry is deleted on the Database.
+        messageManager.deleteMessages(id).then(()=> {
+            //populateMessageEntriesDOM()
+        })
 
-//     }
+    }
 
-// })
+})
+
+
 module.exports = populateMessageEntriesDOM;
