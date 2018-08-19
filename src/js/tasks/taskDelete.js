@@ -4,7 +4,7 @@ const loadTasks = require("./tasksList")
 
 
 function removeTasks () {
-document.getElementById("container").addEventListener("click", event => {
+document.getElementById("taskListInfo").addEventListener("click", event => {
     console.log("hi")
     if(event.target.id.split("--")[0] === "completed"){
         let id = event.target.id.split("--")[1]

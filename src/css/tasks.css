@@ -15,12 +15,13 @@
 }
 
 
-#container {
+#taskListInfo {
     background-color: rgb(137, 192, 189);
     border: 5px solid darkkhaki; 
 } 
 
-
-#container h5 checkbox:nth-of-type(2) {
+/*
+#container h5 checkbox:nth-of-type(2) 
     border-bottom: 5px solid darkkhaki; 
-}
+
+*/

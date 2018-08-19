@@ -15,10 +15,10 @@ function loadTasks() {
 
   findTasks.then(result => {
     console.log(result)
-    document.getElementById("container")
-            container.textContent = ""
+    document.getElementById("taskListInfo")
+    taskListInfo.textContent = ""
     result.forEach(element => {
-      document.getElementById("container").innerHTML += `
+      document.getElementById("taskListInfo").innerHTML += `
       
         <h4>Task: ${element.name}</h4>
         <h5>Date to complete: ${element.completeDate}</h5>
