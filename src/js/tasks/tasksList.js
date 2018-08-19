@@ -2,7 +2,7 @@
 const taskManager = require("../dataManager/tasksManager")
 const sessionUser = require("../dataManager/sessionActiveUser")
 const loadTaskForm = require("./taskForm")
-//getActiveUser.ID
+
 
 //load tasks associated with userID in session storage
 function loadTasks() {
@@ -10,7 +10,7 @@ function loadTasks() {
   //console.log(sessionUser.getActiveUser().id)
   let findUser = sessionUser.getActiveUser().id
   let findTasks = taskManager.getAllTasks(findUser)
-  console.log(findUser)
+  //console.log(findUser)
   console.log(findTasks)
 
   findTasks.then(result => {
@@ -30,16 +30,6 @@ function loadTasks() {
   })
 
   
-
-//will need to use split and will need to have unique id through add process
-/*
-let removeTasks = taskManager.deleteTask(name)
-function removeTask () {
-  if (target) {
-}
-document.getElementById("removeIt").addEventListener("click", removeTask())
-
-*/
 
 }
 

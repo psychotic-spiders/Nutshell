@@ -13,17 +13,15 @@ const inputArticles = require("./articles/inputArticles")
 const listArticles = require("./articles/articleList")
 const editTasks = require("./tasks/taskEdit")
 const removeArticles = require("./articles/articleDelete")
-const renderEventsForm = require("./events/eventsForm")
-const saveEvents = require("./events/saveEvents")
-const events = require("./events/eventsList")
 const inputMessageDOM = require("./messages/inputMessagesDOM");
 const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");
 const populateMessageEntriesDOMs = require("./messages/addMessageEntriesDOM");
 
 //below is the DOM representation for the page:
 function logInPage() {
-    document.getElementById("container").innerHTML = `
-<h2>Login</h2>
+    document.getElementById("logIn").innerHTML = `
+    <h1>Welcome To NutShell</h1>
+<h2>Please Log In</h2>
 
     <div class = "container">
         <label <label for="uname"><b>Username</b></label>
@@ -54,7 +52,7 @@ function logInPage() {
             
             } else {
                 sessionActiveUser.saveActiveUser(user)
-                $("#container").empty();
+                $("#logIn").empty();
                 //loadTaskForm();
                 loadTasks();
 
@@ -63,7 +61,6 @@ function logInPage() {
                 saveMessageEntryToDatabase()
                 populateMessageEntriesDOMs()
                 removeTasks()
-                //editTasks()
                 document.getElementById("newTask").innerHTML = `
                 <button id="addNewTask">Add New Task</button>
                `
@@ -85,7 +82,7 @@ function logInPage() {
                 const deleteEvents = require("./events/deleteEvents");
                 saveEvents()
                 events()
-                deleteEvents()
+                //deleteEvents()
             }
 
 
@@ -93,8 +90,8 @@ function logInPage() {
     }
 //below if user clicks register
     function regUser() {
-        $("#container").empty()
-        document.querySelector("#container").innerHTML = registration.renderForm();
+        $("#logIn").empty()
+        document.querySelector("#logIn").innerHTML = registration.renderForm();
         activateForm()
 
     }

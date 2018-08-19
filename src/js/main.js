@@ -5,8 +5,8 @@ const loadScreen = require("./tasks/tasksList.js")
 //const taskManager = require("./dataManager/tasksManager")
 
 //const sessionActiveUser = require("./dataManager/sessionActiveUser.js")
-
 // Articles
+/*
 const activateForm = require("./registration/registrationManager");
 const articleManager = require("./dataManager/articlesManager");
 const addArticlesDom = require("./articles/addArticlesDom");
@@ -19,7 +19,7 @@ const listArticles = require("./articles/articleList")
 /* const registration = require("./registration/registration");
 document.querySelector("#registrationForm").innerHTML = registration.renderForm();
 activateForm() */
-
+/*
 // Events - Mike
 const eventsForm = require("./events/eventsForm");
 const saveEvents = require("./events/saveEvents");
@@ -27,26 +27,17 @@ const events = require("./events/events")
 //document.querySelector("#eventsForm").innerHTML = eventsForm.renderEventsForm();
 //saveEvents()
 //events()
-
+/*
 // Messages - Dejan
 // const inputMessageDOM = require("./messages/inputMessagesDOM");
 // const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");
 // const messageEntriesDOM = require("./messages/messageEntriesDOM");
 // const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM");
-
+*/
 
 
 logInPage()
 //listArticles()
-
-
-
-
-
-
-
-
-
 
 
 // Dejan
