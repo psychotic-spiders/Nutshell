@@ -73,9 +73,7 @@ function logInPage() {
                 removeArticles()
                 document.querySelector("#inputArticleDOM").innerHTML = inputArticles.renderArticleForm();
                 saveArticleToDatabase()
-                document.querySelector("#eventsForm").innerHTML = eventsForm.renderEventsForm();
-                saveEvents()
-                events()
+                
                 
                 
                 //console.log(user)
