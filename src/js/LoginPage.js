@@ -1,35 +1,34 @@
-const userManager = require("./dataManager/userManager.js");
+const userManager = require("./dataManager/userManager.js")
 const sessionActiveUser = require("./dataManager/sessionActiveUser")
 const registration = require("./registration/registration.js")
 const activateForm = require("./registration/registrationManager")
-const loadTasks = require("./tasksList.js")
-const loadTaskForm = require("./taskForm")
-const renderEventsForm = require("./events/eventsForm")
-
-const removeTasks = require("./taskDelete")
+const loadTasks = require("./tasks/tasksList.js")
+const loadTaskForm = require("./tasks/taskForm.js")
+//const populateMessageEntriesDOM = require("./messages/addMessageEntriesDOM")
+const removeTasks = require("./tasks/taskDelete.js")
 const $ = require("jquery")
 const renderArticleForm = require("./articles/inputArticles")
 const saveArticleToDatabase = require("./articles/addArticlesDom")
 const inputArticles = require("./articles/inputArticles")
 const listArticles = require("./articles/articleList")
+const editTasks = require("./tasks/taskEdit")
 const removeArticles = require("./articles/articleDelete")
-
-// dejan
 const inputMessageDOM = require("./messages/inputMessagesDOM");
 const saveMessageEntryToDatabase = require("./messages/addInputMessagesDOM");
 const populateMessageEntriesDOMs = require("./messages/addMessageEntriesDOM");
 
 //below is the DOM representation for the page:
 function logInPage() {
-    document.getElementById("container").innerHTML = `
-<h2>Login Page</h2>
+    document.getElementById("logIn").innerHTML = `
+    <h1>Welcome To NutShell</h1>
+<h2>Please Log In</h2>
 
     <div class = "container">
         <label <label for="uname"><b>Username</b></label>
-        <input id="usrNameInput" type="text" placeholder="Enter Username" name="uname" required>
+        <input id="usrNameInput" type="text" placeholder="Enter Username" name="uname" required/>
 
         <label for="email"><b>Email</b></label>
-    <input id="emailInput" type="password" placeholder="Enter Email" name="email" required>
+    <input id="emailInput" type="password" placeholder="Enter Email" name="email" required/>
 
     <button id="logInButton">Login</button>
     <br>
@@ -48,33 +47,32 @@ function logInPage() {
         const email = document.getElementById("emailInput").value
         userManager.getSingleUsers(userName, email).then(user => {
             //console.log(user);
-            if (user.length === 0) {
+            if (user.length === 0 || userName === "") {
                 alert("please try again!")
-            }
-            else {
+            
+            } else {
                 sessionActiveUser.saveActiveUser(user)
-                $("#container").empty();
-                loadTaskForm();
+                $("#logIn").empty();
+                //loadTaskForm();
                 loadTasks();
 
                 document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
                 // posts data put into text area on click to database
                 saveMessageEntryToDatabase()
                 populateMessageEntriesDOMs()
-
-
-
-
-
-
                 removeTasks()
+                document.getElementById("newTask").innerHTML = `
+                <button id="addNewTask">Add New Task</button>
+               `
+                document.getElementById("addNewTask").addEventListener("click", loadTaskForm)
                 //renderArticleForm()
                 listArticles()
                 removeArticles()
                 document.querySelector("#inputArticleDOM").innerHTML = inputArticles.renderArticleForm();
                 saveArticleToDatabase()
-
-
+                
+                
+                
                 //console.log(user)
                 // Events - Mike
                 const eventsForm = require("./events/eventsForm");
@@ -84,7 +82,7 @@ function logInPage() {
                 const deleteEvents = require("./events/deleteEvents");
                 saveEvents()
                 events()
-                deleteEvents()
+                //deleteEvents()
             }
 
 
@@ -92,12 +90,13 @@ function logInPage() {
     }
 //below if user clicks register
     function regUser() {
-        $("#container").empty()
-        document.querySelector("#container").innerHTML = registration.renderForm();
+        $("#logIn").empty()
+        document.querySelector("#logIn").innerHTML = registration.renderForm();
         activateForm()
 
     }
-
+    //window.sessionStorage.setItem("currentSession", response.id)
+    //console.log(response.id)
 
 }
 module.exports = logInPage

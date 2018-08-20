@@ -1,0 +1,27 @@
+
+
+#newTask {
+   border-bottom: 5px solid darkkhaki;
+    background-color: rgb(137, 192, 189);
+} 
+
+#taskForm {
+    background-color: rgb(137, 192, 189);
+
+}
+
+#addNewTask {
+    background-color: lightcoral;
+}
+
+
+#taskListInfo {
+    background-color: rgb(137, 192, 189);
+    border: 5px solid darkkhaki; 
+} 
+
+/*
+#container h5 checkbox:nth-of-type(2) 
+    border-bottom: 5px solid darkkhaki; 
+
+*/

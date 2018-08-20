@@ -18,15 +18,21 @@ const sessionActiveUser = Object.create(null, {
                     "id": users[0].id,
                     "username": users[0].userName,
                     "email": users[0].email
+                   
                 }))
+                  
         }
     },
+
+
     //remove user from session storage
     clearActiveUser: {
         value: () => {
             sessionStorage.removeItem("ActiveUser")
         }
     }
+
+    
 
 })
 
