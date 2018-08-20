@@ -1,15 +1,16 @@
+/*
 const taskManager = require("../dataManager/tasksManager")
 const loadTasks = require("./tasksList")
 const $ = require("jquery")
 
 
 function editTasks () {
-document.getElementById("editIt--${element.id}").addEventListener("click", event => {
+document.getElementById("taskListInfo").addEventListener("click", event => {
     console.log("yo")
     if(event.target.id.split("--")[0] === "editIt"){
         let id = event.target.id.split("--")[1]
-        taskManager.updateTask(id).then(()=> {
-            $("#taskForm").hide() //hides the form after save
+        taskManager.editTasks(id).then(()=> {
+            $("#taskForm").show() //hides the form after save
            loadTasks() //show updated list.
     })
 }
@@ -21,3 +22,4 @@ document.getElementById("editIt--${element.id}").addEventListener("click", event
 
 }
 module.exports = editTasks
+*/

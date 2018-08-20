@@ -30,7 +30,26 @@ const taskManager = Object.create(null, {
                 }).then(r => r.json)
             }
         },
+    },
+
+    editTasks: {
+        value: (id, name, completeDate) => {
+            return fetch(`http://localhost:8088/tasks/id=${id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(name, completeDate),
+                
+        })
+        .then(result => result.json)
     }
+    
+    }
+
+
 })
 
 module.exports = taskManager
+
+
