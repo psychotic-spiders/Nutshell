@@ -2,19 +2,23 @@
 const taskManager = require("../dataManager/tasksManager")
 const sessionUser = require("../dataManager/sessionActiveUser")
 const loadTaskForm = require("./taskForm")
-
+const $ = require("jquery")
 
 //load tasks associated with userID in session storage
 function loadTasks() {
+  document.getElementById("newTask").innerHTML = `
+                <button id="addNewTask">Add New Task</button>
+               `
+                document.getElementById("newTask").addEventListener("click", loadTaskForm)
   //console.log("Hi")
   //console.log(sessionUser.getActiveUser().id)
   let findUser = sessionUser.getActiveUser().id
   let findTasks = taskManager.getAllTasks(findUser)
   //console.log(findUser)
-  console.log(findTasks)
+  //console.log(findTasks)
 
   findTasks.then(result => {
-    console.log(result)
+    //console.log(result)
     document.getElementById("taskListInfo")
     taskListInfo.textContent = ""
     result.forEach(element => {

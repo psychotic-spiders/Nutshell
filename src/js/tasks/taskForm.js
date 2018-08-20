@@ -19,7 +19,6 @@ function loadTaskForm() {
 </fieldset>
 
 <button id="SaveEntryButton">Save Entry</button>
-<button id"EditButton">Edit</button>
 `
 
 
@@ -43,8 +42,10 @@ const userObject = session.getActiveUser()
             .then(() => {
             //console.log(loadTasks())
             $("#taskForm").hide()
+            //const loadTasks = require("./tasksList")
             loadTasks()
         })
+
 
     })
 

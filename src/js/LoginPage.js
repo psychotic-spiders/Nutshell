@@ -50,21 +50,18 @@ function logInPage() {
             if (user.length === 0 || userName === "") {
                 alert("please try again!")
             
-            } else {
+            } else { //load all the users stuff
                 sessionActiveUser.saveActiveUser(user)
                 $("#logIn").empty();
                 //loadTaskForm();
                 loadTasks();
+                removeTasks()
 
                 document.querySelector("#inputMessageDOM").innerHTML = inputMessageDOM.renderEntryForm();
                 // posts data put into text area on click to database
                 saveMessageEntryToDatabase()
                 populateMessageEntriesDOMs()
-                removeTasks()
-                document.getElementById("newTask").innerHTML = `
-                <button id="addNewTask">Add New Task</button>
-               `
-                document.getElementById("addNewTask").addEventListener("click", loadTaskForm)
+                
                 //renderArticleForm()
                 listArticles()
                 removeArticles()
@@ -95,8 +92,7 @@ function logInPage() {
         activateForm()
 
     }
-    //window.sessionStorage.setItem("currentSession", response.id)
-    //console.log(response.id)
+    
 
 }
 module.exports = logInPage

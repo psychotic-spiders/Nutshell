@@ -1,0 +1,14 @@
+
+body  {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: lightblue;
+        align-content: stretch;
+        height: 75%;
+}
+      
+      .child {
+        width: 30%;
+      }
+      
+      
